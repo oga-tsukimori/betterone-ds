@@ -62,7 +62,7 @@ export default function DashboardTemplatePage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add card badge" />
+        <DocCode code="npx betterone-ds add card badge" />
       </DocSection>
 
       <DocSection id="recent" title="Recent activity">

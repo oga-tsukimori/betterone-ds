@@ -26,7 +26,7 @@ export default function AccordionDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/accordion.tsx" code={code} preview={<AccordionDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add accordion" />
+        <DocCode code="npx betterone-ds add accordion" />
       </DocSection>
 
       <DocSection id="props" title="Props">

@@ -26,7 +26,7 @@ export default function DatePickerDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/calendar.tsx" code={code} preview={<DatePickerDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add calendar popover" />
+        <DocCode code="npx betterone-ds add calendar popover" />
       </DocSection>
 
       <DocSection id="props" title="Props">

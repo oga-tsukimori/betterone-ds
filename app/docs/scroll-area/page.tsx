@@ -21,7 +21,7 @@ export default function ScrollAreaDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/scroll-area.tsx" code={code} preview={<ScrollAreaDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add scroll-area" />
+        <DocCode code="npx betterone-ds add scroll-area" />
       </DocSection>
 
       <DocSection id="props" title="Props">

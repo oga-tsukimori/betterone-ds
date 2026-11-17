@@ -22,7 +22,7 @@ export default function LabelDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/label.tsx" code={code} preview={<LabelDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add label" />
+        <DocCode code="npx betterone-ds add label" />
       </DocSection>
 
       <DocSection id="props" title="Props">

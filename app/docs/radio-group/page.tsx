@@ -24,7 +24,7 @@ export default function RadioGroupDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/radio-group.tsx" code={code} preview={<RadioGroupDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add radio-group" />
+        <DocCode code="npx betterone-ds add radio-group" />
       </DocSection>
 
       <DocSection id="props" title="Props">

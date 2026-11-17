@@ -53,7 +53,7 @@ export default function AlertDialogDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add alert-dialog" />
+        <DocCode code="npx betterone-ds add alert-dialog" />
       </DocSection>
 
       <DocSection id="props" title="Props">

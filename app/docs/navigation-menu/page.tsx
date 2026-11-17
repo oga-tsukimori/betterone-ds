@@ -27,7 +27,7 @@ export default function NavigationMenuDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/navigation-menu.tsx" code={code} preview={<NavigationMenuDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add navigation-menu" />
+        <DocCode code="npx betterone-ds add navigation-menu" />
       </DocSection>
 
       <DocSection id="props" title="Props">

@@ -44,7 +44,7 @@ export default function InputDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add input" />
+        <DocCode code="npx betterone-ds add input" />
       </DocSection>
 
       <DocSection id="props" title="Props">

@@ -26,7 +26,7 @@ export default function InputOtpDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/input-otp.tsx" code={code} preview={<InputOtpDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add input-otp" />
+        <DocCode code="npx betterone-ds add input-otp" />
       </DocSection>
 
       <DocSection id="props" title="Props">

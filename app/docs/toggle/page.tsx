@@ -21,7 +21,7 @@ export default function ToggleDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/toggle.tsx" code={code} preview={<ToggleDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add toggle" />
+        <DocCode code="npx betterone-ds add toggle" />
       </DocSection>
 
       <DocSection id="props" title="Props">

@@ -24,7 +24,7 @@ export default function TooltipDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/tooltip.tsx" code={code} preview={<TooltipDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add tooltip" />
+        <DocCode code="npx betterone-ds add tooltip" />
       </DocSection>
 
       <DocSection id="props" title="Props">

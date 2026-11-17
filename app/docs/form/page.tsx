@@ -27,7 +27,7 @@ export default function FormDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/field.tsx" code={code} preview={<FormDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add field" />
+        <DocCode code="npx betterone-ds add field" />
       </DocSection>
 
       <DocSection id="props" title="Props">

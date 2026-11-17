@@ -27,7 +27,7 @@ export default function PaginationDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/pagination.tsx" code={code} preview={<PaginationDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add pagination" />
+        <DocCode code="npx betterone-ds add pagination" />
       </DocSection>
 
       <DocSection id="props" title="Props">

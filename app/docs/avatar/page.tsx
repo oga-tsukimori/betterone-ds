@@ -23,7 +23,7 @@ export default function AvatarDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/avatar.tsx" code={code} preview={<AvatarDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add avatar" />
+        <DocCode code="npx betterone-ds add avatar" />
       </DocSection>
 
       <DocSection id="props" title="Props">

@@ -27,7 +27,7 @@ export default function CarouselDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/carousel.tsx" code={code} preview={<CarouselDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add carousel" />
+        <DocCode code="npx betterone-ds add carousel" />
       </DocSection>
 
       <DocSection id="props" title="Props">

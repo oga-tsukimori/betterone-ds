@@ -24,7 +24,7 @@ export default function PopoverDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/popover.tsx" code={code} preview={<PopoverDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add popover" />
+        <DocCode code="npx betterone-ds add popover" />
       </DocSection>
 
       <DocSection id="props" title="Props">

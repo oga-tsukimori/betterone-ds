@@ -40,7 +40,7 @@ export default function BadgeDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add badge" />
+        <DocCode code="npx betterone-ds add badge" />
       </DocSection>
 
       <DocSection id="props" title="Props">

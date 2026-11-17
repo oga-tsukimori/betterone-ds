@@ -54,7 +54,7 @@ export default function CheckboxDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add checkbox" />
+        <DocCode code="npx betterone-ds add checkbox" />
       </DocSection>
 
       <DocSection id="props" title="Props">

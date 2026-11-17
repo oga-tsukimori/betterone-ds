@@ -32,7 +32,7 @@ export default function SidebarDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/sidebar.tsx" code={code} preview={<SidebarDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add sidebar" />
+        <DocCode code="npx betterone-ds add sidebar" />
       </DocSection>
 
       <DocSection id="props" title="Props">

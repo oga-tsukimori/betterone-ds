@@ -21,7 +21,7 @@ export default function AspectRatioDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/aspect-ratio.tsx" code={code} preview={<AspectRatioDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add aspect-ratio" />
+        <DocCode code="npx betterone-ds add aspect-ratio" />
       </DocSection>
 
       <DocSection id="props" title="Props">

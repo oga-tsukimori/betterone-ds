@@ -35,7 +35,7 @@ export default function ChartDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add chart" />
+        <DocCode code="npx betterone-ds add chart" />
       </DocSection>
 
       <DocSection id="props" title="Props">

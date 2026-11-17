@@ -21,7 +21,7 @@ export default function TextareaDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/textarea.tsx" code={code} preview={<TextareaDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add textarea" />
+        <DocCode code="npx betterone-ds add textarea" />
       </DocSection>
 
       <DocSection id="props" title="Props">

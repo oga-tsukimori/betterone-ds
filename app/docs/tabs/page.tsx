@@ -54,7 +54,7 @@ export default function TabsDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add tabs" />
+        <DocCode code="npx betterone-ds add tabs" />
       </DocSection>
 
       <DocSection id="props" title="Props">

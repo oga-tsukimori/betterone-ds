@@ -47,7 +47,7 @@ export default function AlertDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add alert" />
+        <DocCode code="npx betterone-ds add alert" />
       </DocSection>
 
       <DocSection id="props" title="Props">

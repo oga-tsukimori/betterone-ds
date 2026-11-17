@@ -21,7 +21,7 @@ export default function SkeletonDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/skeleton.tsx" code={code} preview={<SkeletonDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add skeleton" />
+        <DocCode code="npx betterone-ds add skeleton" />
       </DocSection>
 
       <DocSection id="props" title="Props">

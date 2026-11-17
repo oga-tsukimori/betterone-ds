@@ -26,7 +26,7 @@ export default function DropdownMenuDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/dropdown-menu.tsx" code={code} preview={<DropdownMenuDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add dropdown-menu" />
+        <DocCode code="npx betterone-ds add dropdown-menu" />
       </DocSection>
 
       <DocSection id="props" title="Props">
