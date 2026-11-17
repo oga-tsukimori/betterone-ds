@@ -45,7 +45,7 @@ export default async function PlaceholderDocsPage({
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code={`npx shadcn@latest add ${slug}`} />
+        <DocCode code={`npx betterone-ds add ${slug}`} />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">

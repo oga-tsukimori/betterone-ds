@@ -26,7 +26,7 @@ export default function CommandDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/command.tsx" code={code} preview={<CommandDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add command" />
+        <DocCode code="npx betterone-ds add command" />
       </DocSection>
 
       <DocSection id="props" title="Props">

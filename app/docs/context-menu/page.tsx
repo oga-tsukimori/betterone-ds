@@ -45,7 +45,7 @@ export default function ContextMenuDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add context-menu" />
+        <DocCode code="npx betterone-ds add context-menu" />
       </DocSection>
 
       <DocSection id="props" title="Props">

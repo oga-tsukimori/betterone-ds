@@ -26,7 +26,7 @@ export default function BreadcrumbDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/breadcrumb.tsx" code={code} preview={<BreadcrumbDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add breadcrumb" />
+        <DocCode code="npx betterone-ds add breadcrumb" />
       </DocSection>
 
       <DocSection id="props" title="Props">

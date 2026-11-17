@@ -24,7 +24,7 @@ export default function SonnerDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/sonner.tsx" code={code} preview={<SonnerDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add sonner" />
+        <DocCode code="npx betterone-ds add sonner" />
       </DocSection>
 
       <DocSection id="props" title="Props">

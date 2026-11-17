@@ -21,7 +21,7 @@ export default function SliderDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/slider.tsx" code={code} preview={<SliderDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add slider" />
+        <DocCode code="npx betterone-ds add slider" />
       </DocSection>
 
       <DocSection id="props" title="Props">

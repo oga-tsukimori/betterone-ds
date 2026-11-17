@@ -51,7 +51,7 @@ export default function TableDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add table" />
+        <DocCode code="npx betterone-ds add table" />
       </DocSection>
 
       <DocSection id="props" title="Props">

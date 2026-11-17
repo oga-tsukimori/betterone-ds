@@ -28,7 +28,7 @@ export default function MenubarDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/menubar.tsx" code={code} preview={<MenubarDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add menubar" />
+        <DocCode code="npx betterone-ds add menubar" />
       </DocSection>
 
       <DocSection id="props" title="Props">

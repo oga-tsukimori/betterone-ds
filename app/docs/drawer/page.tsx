@@ -37,7 +37,7 @@ export default function DrawerDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add drawer" />
+        <DocCode code="npx betterone-ds add drawer" />
       </DocSection>
 
       <DocSection id="props" title="Props">

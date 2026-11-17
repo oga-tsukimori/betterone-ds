@@ -40,7 +40,7 @@ export default function ResizableDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add resizable" />
+        <DocCode code="npx betterone-ds add resizable" />
       </DocSection>
 
       <DocSection id="props" title="Props">

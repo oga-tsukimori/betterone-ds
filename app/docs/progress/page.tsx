@@ -25,7 +25,7 @@ export default function ProgressDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/progress.tsx" code={code} preview={<ProgressDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add progress" />
+        <DocCode code="npx betterone-ds add progress" />
       </DocSection>
 
       <DocSection id="props" title="Props">

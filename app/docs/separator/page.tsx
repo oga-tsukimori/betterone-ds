@@ -22,7 +22,7 @@ export default function SeparatorDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/separator.tsx" code={code} preview={<SeparatorDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add separator" />
+        <DocCode code="npx betterone-ds add separator" />
       </DocSection>
 
       <DocSection id="props" title="Props">

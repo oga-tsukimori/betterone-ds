@@ -24,7 +24,7 @@ export default function HoverCardDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/hover-card.tsx" code={code} preview={<HoverCardDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add hover-card" />
+        <DocCode code="npx betterone-ds add hover-card" />
       </DocSection>
 
       <DocSection id="props" title="Props">

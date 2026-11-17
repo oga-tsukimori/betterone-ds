@@ -24,7 +24,7 @@ export default function SheetDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/sheet.tsx" code={code} preview={<SheetDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add sheet" />
+        <DocCode code="npx betterone-ds add sheet" />
       </DocSection>
 
       <DocSection id="props" title="Props">

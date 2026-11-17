@@ -54,7 +54,7 @@ export default function CardDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add card" />
+        <DocCode code="npx betterone-ds add card" />
       </DocSection>
 
       <DocSection id="parts" title="Parts">

@@ -67,7 +67,7 @@ export default function AuthenticationTemplatePage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add card input label button" />
+        <DocCode code="npx betterone-ds add card input label button" />
       </DocSection>
 
       <DocSection id="usage" title="Usage">

@@ -1,0 +1,16 @@
+{
+  "name": "betterone-ds",
+  "version": "0.1.0",
+  "description": "CLI for the BetterOne design system. Adds components and tokens from the BetterOne shadcn registry.",
+  "type": "module",
+  "bin": {
+    "betterone-ds": "./bin/betterone.mjs",
+    "betterone": "./bin/betterone.mjs"
+  },
+  "files": ["bin", "README.md"],
+  "engines": { "node": ">=18" },
+  "keywords": ["design-system", "shadcn", "registry", "betterone", "cli"],
+  "repository": { "type": "git", "url": "git+https://github.com/oga-tsukimori/betterone-ds.git", "directory": "cli" },
+  "homepage": "https://github.com/oga-tsukimori/betterone-ds",
+  "license": "MIT"
+}

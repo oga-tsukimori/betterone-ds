@@ -24,7 +24,7 @@ export default function ToggleGroupDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/toggle-group.tsx" code={code} preview={<ToggleGroupDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add toggle-group" />
+        <DocCode code="npx betterone-ds add toggle-group" />
       </DocSection>
 
       <DocSection id="props" title="Props">

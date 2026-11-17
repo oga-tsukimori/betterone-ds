@@ -6,25 +6,36 @@ export default function InstallationDocsPage() {
     <DocsPage
       group="Getting started"
       title="Installation"
-      description="Add a component to your project with the shadcn CLI. The component source is copied into your repo, so you can change it."
+      description="Install BetterOne components and tokens into your project with the betterone-ds CLI. The source is copied into your repo, so you can change it."
       toc={[
+        { id: "registry", label: "Connect the registry" },
+        { id: "tokens", label: "Add the tokens" },
         { id: "add", label: "Add a component" },
-        { id: "tokens", label: "Tokens" },
         { id: "next", label: "Next steps" },
       ]}
       {...pagerFor("/docs/installation")}
     >
-      <DocSection id="add" title="Add a component">
-        <DocCode code="npx shadcn@latest add button" />
+      <DocSection id="registry" title="Connect the registry">
         <p className="text-muted-foreground">
-          Replace <code>button</code> with any component name from the sidebar.
+          Run this once in your project. It needs a <code>components.json</code>, so run{" "}
+          <code>npx shadcn@latest init</code> first if you do not have one.
         </p>
+        <DocCode code="npx betterone-ds init" />
       </DocSection>
 
-      <DocSection id="tokens" title="Tokens">
+      <DocSection id="tokens" title="Add the tokens">
         <p className="text-muted-foreground">
-          Colors, radius, and type come from the token set in <code>app/globals.css</code>. Do not copy values
-          into components. Use token classes such as <code>bg-primary</code>.
+          Colors and radius come from the Figma variables. Install them first, so every component picks up the
+          right values in Light and Dark. Do not copy values into components. Use token classes such as{" "}
+          <code>bg-primary</code>.
+        </p>
+        <DocCode code="npx betterone-ds add tokens" />
+      </DocSection>
+
+      <DocSection id="add" title="Add a component">
+        <DocCode code="npx betterone-ds add button" />
+        <p className="text-muted-foreground">
+          Replace <code>button</code> with any component name from the sidebar. Its dependencies are added with it.
         </p>
       </DocSection>
 

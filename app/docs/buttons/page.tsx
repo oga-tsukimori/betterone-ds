@@ -30,7 +30,7 @@ const props = [
   { prop: "isDisabled", type: "boolean", def: "false" },
 ]
 
-const installCommand = "npx shadcn@latest add button"
+const installCommand = "npx betterone-ds add button"
 const usageCode = `import { Button } from "@/components/ui/button"
 
 export function SaveBar() {

@@ -44,7 +44,7 @@ export default function CollapsibleDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add collapsible" />
+        <DocCode code="npx betterone-ds add collapsible" />
       </DocSection>
 
       <DocSection id="props" title="Props">

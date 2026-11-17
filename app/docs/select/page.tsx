@@ -71,7 +71,7 @@ export default function SelectDocsPage() {
       />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add select" />
+        <DocCode code="npx betterone-ds add select" />
       </DocSection>
 
       <DocSection id="props" title="Props">

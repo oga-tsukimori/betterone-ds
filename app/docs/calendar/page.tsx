@@ -21,7 +21,7 @@ export default function CalendarDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/calendar.tsx" code={code} preview={<CalendarDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add calendar" />
+        <DocCode code="npx betterone-ds add calendar" />
       </DocSection>
 
       <DocSection id="props" title="Props">

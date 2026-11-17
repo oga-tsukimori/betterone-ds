@@ -28,7 +28,7 @@ export default function DialogDocsPage() {
       <DocPreviewTabs id="preview" file="components/ui/dialog.tsx" code={code} preview={<DialogDemo />} />
 
       <DocSection id="installation" title="Installation">
-        <DocCode code="npx shadcn@latest add dialog" />
+        <DocCode code="npx betterone-ds add dialog" />
       </DocSection>
 
       <DocSection id="props" title="Props">
