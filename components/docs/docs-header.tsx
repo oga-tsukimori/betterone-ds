@@ -10,8 +10,8 @@ import { Brand, LINKS } from "@/components/landing/nav"
 import { docsPages } from "@/lib/docs-nav"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
+  Command,
   CommandDialog,
-  CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
@@ -93,9 +93,9 @@ export function DocsHeader() {
       </div>
 
       <CommandDialog open={open} onOpenChange={setOpen} title="Search docs" description="Find a page">
+        <Command>
         <CommandInput placeholder="Search docs…" />
-        <CommandList aria-label="Pages">
-          <CommandEmpty>No pages found.</CommandEmpty>
+        <CommandList aria-label="Pages" renderEmptyState={() => <div className="py-6 text-center text-sm text-muted-foreground">No pages found.</div>}>
           <CommandGroup heading="Pages">
             {docsPages.map((item) => (
               <CommandItem key={item.href} id={item.href} textValue={`${item.group} ${item.title}`} onAction={() => go(item.href)}>
@@ -105,6 +105,7 @@ export function DocsHeader() {
             ))}
           </CommandGroup>
         </CommandList>
+        </Command>
       </CommandDialog>
     </header>
   )
