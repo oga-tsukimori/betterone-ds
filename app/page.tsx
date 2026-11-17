@@ -1,19 +1,26 @@
-import { Button } from "@/components/ui/button"
+import { Hero } from "@/components/landing/hero"
+import { Nav } from "@/components/landing/nav"
+import {
+  Cta,
+  GetStarted,
+  Footer,
+  Marquee,
+  Products,
+} from "@/components/landing/sections"
 
+// The landing page uses the same Figma tokens as the docs. Tanker (font-display) is the display face for the hero and section titles.
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="flex min-h-svh flex-1 flex-col bg-background text-foreground">
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee />
+        <Products />
+        <GetStarted />
+        <Cta />
+      </main>
+      <Footer />
     </div>
   )
 }
