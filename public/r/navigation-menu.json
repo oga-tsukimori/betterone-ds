@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu",
+  "title": "Navigation Menu",
+  "description": "Navigation Menu component built with the BetterOne semantic tokens.",
+  "dependencies": [
+    "cn"
+  ],
+  "files": [
+    {
+      "path": "components/ui/navigation-menu.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"cn\"\n\n// Site navigation: a list of links. Uses semantic tokens only.\nfunction NavigationMenu({ className, ...props }: React.ComponentProps<\"nav\">) {\n  return <nav data-slot=\"navigation-menu\" className={cn(\"relative flex max-w-max items-center\", className)} {...props} />\n}\n\nfunction NavigationMenuList({ className, ...props }: React.ComponentProps<\"ul\">) {\n  return <ul data-slot=\"navigation-menu-list\" className={cn(\"flex items-center gap-1\", className)} {...props} />\n}\n\nfunction NavigationMenuItem(props: React.ComponentProps<\"li\">) {\n  return <li data-slot=\"navigation-menu-item\" {...props} />\n}\n\nfunction NavigationMenuLink({\n  className,\n  isActive,\n  ...props\n}: React.ComponentProps<\"a\"> & { isActive?: boolean }) {\n  return (\n    <a\n      data-slot=\"navigation-menu-link\"\n      aria-current={isActive ? \"page\" : undefined}\n      className={cn(\n        \"inline-flex h-(--size-control-md) items-center rounded-md px-3 text-sm font-medium text-muted-foreground transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring\",\n        isActive && \"bg-muted text-foreground\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

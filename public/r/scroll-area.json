@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area",
+  "title": "Scroll Area",
+  "description": "Scroll Area component built with the BetterOne semantic tokens.",
+  "dependencies": [
+    "cn"
+  ],
+  "files": [
+    {
+      "path": "components/ui/scroll-area.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cn } from \"cn\"\n\nfunction ScrollArea({\n  className,\n  children,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  // Use native scrollbar-width and scrollbar-color to customize the scrollbar.\n  return (\n    <div\n      data-slot=\"scroll-area\"\n      className={cn(\n        \"relative [scrollbar-width:thin] [scrollbar-color:var(--color-border)_transparent] overflow-auto outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-1\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </div>\n  )\n}\n\nexport { ScrollArea }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

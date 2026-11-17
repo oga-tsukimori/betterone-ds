@@ -1,4 +1,4 @@
-import { Check, LoaderCircle, X } from "lucide-react"
+import { ArrowRight, Check, Download, LoaderCircle, Mail, Plus, Trash2, X } from "lucide-react"
 
 import { DocCode, DocPreview, DocSection, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
@@ -53,6 +53,7 @@ export default function ButtonDocsPage() {
         { id: "installation", label: "Installation" },
         { id: "variants", label: "Variants" },
         { id: "sizes", label: "Sizes" },
+        { id: "with-icon", label: "With icon" },
         { id: "states", label: "States" },
         { id: "props", label: "Props" },
         { id: "usage", label: "Usage" },
@@ -120,11 +121,66 @@ export default function ButtonDocsPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button size="icon" aria-label="Add item">
-              +
+              <Plus />
             </Button>
             <span className="font-mono text-xs text-muted-foreground">icon · 36px</span>
           </div>
         </DocPreview>
+      </DocSection>
+
+      <DocSection
+        id="with-icon"
+        title="With icon"
+        description="Put an icon before or after the label, or use an icon-only button. Icons size themselves from the icon tokens, so no size class is needed."
+      >
+        <DocPreview>
+          <div className="flex flex-col items-center gap-2">
+            <Button>
+              <Mail /> Login with email
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">leading icon</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button variant="outline">
+              Continue <ArrowRight />
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">trailing icon</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button variant="secondary">
+              <Download /> Export
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">secondary</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button variant="destructive">
+              <Trash2 /> Delete
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">destructive</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button size="icon" variant="outline" aria-label="Add item">
+              <Plus />
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">icon only</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button isDisabled>
+              <LoaderCircle className="animate-spin" /> Please wait
+            </Button>
+            <span className="font-mono text-xs text-muted-foreground">loading</span>
+          </div>
+        </DocPreview>
+        <div className="mt-4">
+          <DocCode
+            title="with-icon.tsx"
+            code={`import { ArrowRight, Mail, Plus } from "lucide-react"
+
+<Button><Mail /> Login with email</Button>
+<Button variant="outline">Continue <ArrowRight /></Button>
+<Button size="icon" aria-label="Add item"><Plus /></Button>`}
+          />
+        </div>
       </DocSection>
 
       <DocSection id="states" title="States" description="Hover and focus are shown as fixed styles here. In the app they respond to the pointer and keyboard.">
