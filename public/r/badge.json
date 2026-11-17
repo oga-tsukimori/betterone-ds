@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "title": "Badge",
+  "description": "Badge component built with the BetterOne semantic tokens.",
+  "dependencies": [
+    "class-variance-authority",
+    "cn"
+  ],
+  "files": [
+    {
+      "path": "components/ui/badge.tsx",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"cn\"\n\nconst badgeVariants = cva(\n  \"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-sm border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive [&>svg]:pointer-events-none [&>svg]:size-3!\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground [a]:hover:bg-primary/80\",\n        secondary:\n          \"bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80\",\n        destructive:\n          \"bg-destructive-muted text-destructive [a]:hover:bg-destructive-muted/80\",\n        success:\n          \"bg-success-muted text-success [a]:hover:bg-success-muted/80\",\n        warning:\n          \"bg-warning-muted text-warning-muted-foreground [a]:hover:bg-warning-muted/80\",\n        info:\n          \"bg-info-muted text-info [a]:hover:bg-info-muted/80\",\n        outline:\n          \"border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground\",\n        ghost:\n          \"hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)\n\nfunction Badge({\n  className,\n  variant = \"default\",\n  render,\n  ...props\n}: React.ComponentProps<\"span\"> &\n  VariantProps<typeof badgeVariants> & {\n    render?: (props: React.HTMLAttributes<HTMLElement>) => React.ReactNode\n  }) {\n  if (render) {\n    const renderProps = {\n      \"data-slot\": \"badge\",\n      \"data-variant\": variant,\n      className: cn(badgeVariants({ variant }), className),\n      ...props,\n    }\n\n    return render(renderProps)\n  }\n\n  return (\n    <span\n      data-slot=\"badge\"\n      data-variant={variant}\n      className={cn(badgeVariants({ variant }), className)}\n      {...props}\n    />\n  )\n}\n\nexport { Badge, badgeVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

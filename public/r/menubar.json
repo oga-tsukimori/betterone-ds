@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar",
+  "title": "Menubar",
+  "description": "Menubar component built with the BetterOne semantic tokens.",
+  "dependencies": [
+    "cn"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "components/ui/menubar.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cn } from \"cn\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\"\n\n// A row of menus, built from the dropdown menu. Uses semantic tokens only.\nfunction Menubar({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      role=\"menubar\"\n      data-slot=\"menubar\"\n      className={cn(\n        \"flex h-(--size-control-md) items-center gap-1 rounded-md border bg-background p-1\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nconst MenubarMenu = DropdownMenuTrigger\n\nfunction MenubarTrigger({ className, ...props }: React.ComponentProps<typeof Button>) {\n  return (\n    <Button\n      variant=\"ghost\"\n      size=\"sm\"\n      data-slot=\"menubar-trigger\"\n      className={cn(\"h-7 px-2 font-medium\", className)}\n      {...props}\n    />\n  )\n}\n\nconst MenubarContent = DropdownMenu\nconst MenubarItem = DropdownMenuItem\nconst MenubarSeparator = DropdownMenuSeparator\nconst MenubarShortcut = DropdownMenuShortcut\n\nexport {\n  Menubar,\n  MenubarContent,\n  MenubarItem,\n  MenubarMenu,\n  MenubarSeparator,\n  MenubarShortcut,\n  MenubarTrigger,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
