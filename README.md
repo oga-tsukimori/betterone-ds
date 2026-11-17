@@ -1,6 +1,7 @@
-# Next.js template
+# betterone-ds
 
-This is a Next.js template with shadcn/ui.
+Design system for betterone products.
+
 
 ## Adding components
 
