@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretRight, DotsThree } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -11,7 +12,6 @@ import {
   type BreadcrumbsProps,
   type LinkProps,
 } from "react-aria-components"
-import { ChevronRightIcon, MoreHorizontalIcon } from "lucide-react"
 
 function Breadcrumb({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -62,7 +62,7 @@ function BreadcrumbItem({
               aria-hidden="true"
               className={cn("[&>svg]:size-3.5", separatorClassName)}
             >
-              <ChevronRightIcon />
+              <CaretRight />
             </span>
           )}
         </>
@@ -110,7 +110,7 @@ function BreadcrumbEllipsis({
       )}
       {...props}
     >
-      <MoreHorizontalIcon
+      <DotsThree
       />
       <span className="sr-only">More</span>
     </span>

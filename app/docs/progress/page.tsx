@@ -2,11 +2,7 @@ import { ProgressDemo } from "@/components/docs/demos"
 import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
 
-const code = `<Progress value={60} aria-label="Upload">
-  <ProgressTrack>
-    <ProgressIndicator />
-  </ProgressTrack>
-</Progress>`
+const code = `<Progress value={60} aria-label="Upload" />`
 
 export default function ProgressDocsPage() {
   return (

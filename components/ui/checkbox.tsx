@@ -1,12 +1,12 @@
 "use client"
 
+import { Check } from "@phosphor-icons/react"
 import { cn } from "cn"
 import {
   Checkbox as CheckboxPrimitive,
   composeRenderProps,
   type CheckboxProps,
 } from "react-aria-components"
-import { CheckIcon } from "lucide-react"
 
 function Checkbox({ className, children, ...props }: CheckboxProps) {
   return (
@@ -27,7 +27,7 @@ function Checkbox({ className, children, ...props }: CheckboxProps) {
               className="grid place-content-center text-current transition-none [&>svg]:size-3.5"
             >
               {(isSelected || isIndeterminate) && (
-                <CheckIcon
+                <Check
                 />
               )}
             </span>

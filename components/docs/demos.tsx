@@ -21,7 +21,7 @@ import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, Me
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
 import { Popover, PopoverDescription, PopoverHeader, PopoverTitle, PopoverTrigger } from "@/components/ui/popover"
-import { Progress, ProgressIndicator, ProgressTrack } from "@/components/ui/progress"
+import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
@@ -48,14 +48,12 @@ export function LabelDemo() {
   )
 }
 
-const radioLabel = "absolute top-1/2 left-6 -translate-y-1/2 text-sm whitespace-nowrap"
-
 export function RadioGroupDemo() {
   return (
     <RadioGroup defaultValue="card" aria-label="Payment method" className="gap-4">
-      <RadioGroupItem value="card"><span className={radioLabel}>Card</span></RadioGroupItem>
-      <RadioGroupItem value="cash"><span className={radioLabel}>Cash</span></RadioGroupItem>
-      <RadioGroupItem value="transfer"><span className={radioLabel}>Bank transfer</span></RadioGroupItem>
+      <RadioGroupItem value="card">Card</RadioGroupItem>
+      <RadioGroupItem value="cash">Cash</RadioGroupItem>
+      <RadioGroupItem value="transfer">Bank transfer</RadioGroupItem>
     </RadioGroup>
   )
 }
@@ -167,11 +165,7 @@ export function SkeletonDemo() {
 export function ProgressDemo() {
   return (
     <div className="w-full max-w-sm">
-      <Progress value={60} aria-label="Upload progress">
-        <ProgressTrack>
-          <ProgressIndicator />
-        </ProgressTrack>
-      </Progress>
+      <Progress value={60} aria-label="Upload progress" />
     </div>
   )
 }

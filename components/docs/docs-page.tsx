@@ -52,7 +52,7 @@ export function DocsPage({
             <span aria-hidden="true">/</span>
             <span className="text-foreground">{title}</span>
           </nav>
-          <h1 className="font-heading text-[36px] leading-tight font-semibold tracking-tight">{title}</h1>
+          <h1 className="font-display text-5xl leading-none uppercase">{title}</h1>
           {description ? <p className="text-muted-foreground">{description}</p> : null}
         </div>
 

@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretRight, Check } from "@phosphor-icons/react"
 import * as React from "react"
 import { cva } from "class-variance-authority"
 import { cn } from "cn"
@@ -16,7 +17,6 @@ import {
   type MenuItemProps as MenuItemPrimitiveProps,
   type MenuSectionProps as MenuSectionPrimitiveProps,
 } from "react-aria-components"
-import { CheckIcon, ChevronRightIcon } from "lucide-react"
 
 function ContextMenu({
   "data-slot": dataSlot = "context-menu-content",
@@ -146,7 +146,7 @@ function ContextMenuItem({
                 }
               >
                 {isSelected ? (
-                  <CheckIcon
+                  <Check
                   />
                 ) : null}
               </span>
@@ -187,7 +187,7 @@ function ContextMenuSubTrigger({
       {composeRenderProps(children, (children) => (
         <>
           {children}
-          <ChevronRightIcon className="ml-auto" />
+          <CaretRight className="ml-auto" />
         </>
       ))}
     </MenuItemPrimitive>

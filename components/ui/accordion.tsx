@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretDown, CaretUp } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -13,7 +14,6 @@ import {
   type DisclosurePanelProps,
   type DisclosureProps,
 } from "react-aria-components"
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 
 function Accordion({ className, ...props }: DisclosureGroupProps) {
   return (
@@ -55,8 +55,8 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <CaretDown data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
+        <CaretUp data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
       </AccordionTriggerPrimitive>
     </AccordionHeaderPrimitive>
   )

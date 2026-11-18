@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretDown, Check, MagnifyingGlass } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -26,7 +27,6 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group"
-import { ChevronDownIcon, SearchIcon, CheckIcon } from "lucide-react"
 
 function Select<T extends object, M extends "single" | "multiple" = "single">({
   className,
@@ -96,7 +96,7 @@ function SelectTrigger({
       {...props}
     >
       {children}
-      <ChevronDownIcon className="pointer-events-none size-4 text-muted-foreground" />
+      <CaretDown className="pointer-events-none size-4 text-muted-foreground" />
     </ButtonPrimitive>
   )
 }
@@ -186,7 +186,7 @@ function SelectInput({ className, ...props }: SearchFieldProps) {
           className="[&::-webkit-search-cancel-button]:hidden"
         />
         <InputGroupAddon>
-          <SearchIcon className="size-4 shrink-0 opacity-50" />
+          <MagnifyingGlass className="size-4 shrink-0 opacity-50" />
         </InputGroupAddon>
       </InputGroup>
     </SearchField>
@@ -228,7 +228,7 @@ function SelectItem({
           </span>
           <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center">
             {isSelected ? (
-              <CheckIcon className="pointer-events-none" />
+              <Check className="pointer-events-none" />
             ) : null}
           </span>
         </>

@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretRight } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -11,7 +12,6 @@ import {
   Collapsible,
   CollapsibleContent,
 } from "@/components/ui/collapsible"
-import { ChevronRightIcon } from "lucide-react"
 
 function Trace({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -130,7 +130,7 @@ function TraceCollapsibleTrigger({
     >
       {children}
       <TraceIcon className="transition-transform group-aria-expanded/trace-collapsible-trigger:rotate-90">
-        <ChevronRightIcon
+        <CaretRight
         />
       </TraceIcon>
     </ButtonPrimitive>

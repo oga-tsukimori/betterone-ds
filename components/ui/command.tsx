@@ -1,5 +1,6 @@
 "use client"
 
+import { Check, MagnifyingGlass } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -32,7 +33,6 @@ import {
   InputGroup,
   InputGroupAddon,
 } from "@/components/ui/input-group"
-import { SearchIcon, CheckIcon } from "lucide-react"
 
 function Command({
   className,
@@ -110,9 +110,9 @@ function CommandInput({ className, ...props }: InputProps) {
       autoFocus
       aria-label={props.placeholder || "Search"}
       data-slot="command-input-wrapper"
-      className="p-1 pb-0"
+      className="border-b px-1"
     >
-      <InputGroup className="h-9 bg-input/50">
+      <InputGroup className="h-10 border-0 bg-transparent shadow-none ring-0 has-[[data-slot=command-input]:focus-visible]:ring-0">
         <Input
           {...props}
           data-slot="command-input"
@@ -122,7 +122,7 @@ function CommandInput({ className, ...props }: InputProps) {
           )}
         />
         <InputGroupAddon>
-          <SearchIcon className="size-4 shrink-0 opacity-50" />
+          <MagnifyingGlass className="size-4 shrink-0 opacity-50" />
         </InputGroupAddon>
       </InputGroup>
     </SearchField>
@@ -205,7 +205,7 @@ function CommandItem<T extends object>({
       {composeRenderProps(children, (children) => (
         <>
           {children}
-          <CheckIcon className="ml-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
+          <Check className="ml-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
         </>
       ))}
     </MenuItem>

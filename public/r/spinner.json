@@ -5,12 +5,12 @@
   "description": "Spinner component built with the BetterOne semantic tokens.",
   "dependencies": [
     "cn",
-    "lucide-react"
+    "@phosphor-icons/react"
   ],
   "files": [
     {
       "path": "components/ui/spinner.tsx",
-      "content": "import { cn } from \"cn\"\nimport { Loader2Icon } from \"lucide-react\"\n\nfunction Spinner({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <Loader2Icon data-slot=\"spinner\" role=\"status\" aria-label=\"Loading\" className={cn(\"size-4 animate-spin\", className)} {...props} />\n  )\n}\n\nexport { Spinner }\n",
+      "content": "import { SpinnerGap } from \"@phosphor-icons/react\"\nimport { cn } from \"cn\"\n\nfunction Spinner({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <SpinnerGap data-slot=\"spinner\" role=\"status\" aria-label=\"Loading\" className={cn(\"size-4 animate-spin\", className)} {...props} />\n  )\n}\n\nexport { Spinner }\n",
       "type": "registry:ui"
     }
   ],

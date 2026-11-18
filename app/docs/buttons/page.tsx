@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Download, LoaderCircle, Mail, Plus, Trash2, X } from "lucide-react"
+import { ArrowRight, Check, DownloadSimple, EnvelopeSimple, Plus, SpinnerGap, Trash, X } from "@phosphor-icons/react/ssr"
 
 import { DocCode, DocPreview, DocSection, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
@@ -136,7 +136,7 @@ export default function ButtonDocsPage() {
         <DocPreview>
           <div className="flex flex-col items-center gap-2">
             <Button>
-              <Mail /> Login with email
+              <EnvelopeSimple /> Login with email
             </Button>
             <span className="font-mono text-xs text-muted-foreground">leading icon</span>
           </div>
@@ -148,13 +148,13 @@ export default function ButtonDocsPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button variant="secondary">
-              <Download /> Export
+              <DownloadSimple /> Export
             </Button>
             <span className="font-mono text-xs text-muted-foreground">secondary</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button variant="destructive">
-              <Trash2 /> Delete
+              <Trash /> Delete
             </Button>
             <span className="font-mono text-xs text-muted-foreground">destructive</span>
           </div>
@@ -166,7 +166,7 @@ export default function ButtonDocsPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button isDisabled>
-              <LoaderCircle className="animate-spin" /> Please wait
+              <SpinnerGap className="animate-spin" /> Please wait
             </Button>
             <span className="font-mono text-xs text-muted-foreground">loading</span>
           </div>
@@ -174,9 +174,9 @@ export default function ButtonDocsPage() {
         <div className="mt-4">
           <DocCode
             title="with-icon.tsx"
-            code={`import { ArrowRight, Mail, Plus } from "lucide-react"
+            code={`import { ArrowRight, EnvelopeSimple, Plus } from "@phosphor-icons/react"
 
-<Button><Mail /> Login with email</Button>
+<Button><EnvelopeSimple /> Login with email</Button>
 <Button variant="outline">Continue <ArrowRight /></Button>
 <Button size="icon" aria-label="Add item"><Plus /></Button>`}
           />
@@ -203,7 +203,7 @@ export default function ButtonDocsPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button isDisabled>
-              <LoaderCircle className="animate-spin" aria-hidden="true" />
+              <SpinnerGap className="animate-spin" aria-hidden="true" />
               Saving
             </Button>
             <span className="font-mono text-xs text-muted-foreground">loading</span>
