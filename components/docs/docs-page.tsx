@@ -1,7 +1,14 @@
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   CodeBlock,
@@ -35,11 +42,33 @@ export function DocsPage({
   next?: Pager
   children: React.ReactNode
 }) {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Docs",
+        item: "https://design.betterone.work/docs",
+      },
+      ...(group ? [{ "@type": "ListItem", position: 2, name: group }] : []),
+      { "@type": "ListItem", position: group ? 3 : 2, name: title },
+    ],
+  }
+
   return (
     <div className="flex min-w-0 flex-1 basis-[360px] flex-wrap items-start">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <main className="flex min-w-0 flex-1 flex-col gap-12 px-6 py-10 lg:px-12">
         <div className="flex flex-col gap-3">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[13px] text-muted-foreground">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-[13px] text-muted-foreground"
+          >
             <Link href="/docs" className="hover:text-foreground">
               Docs
             </Link>
@@ -52,16 +81,38 @@ export function DocsPage({
             <span aria-hidden="true">/</span>
             <span className="text-foreground">{title}</span>
           </nav>
-          <h1 className="font-heading text-[36px] leading-tight font-semibold tracking-tight">{title}</h1>
-          {description ? <p className="text-muted-foreground">{description}</p> : null}
+          <h1 className="font-heading text-[36px] leading-tight font-semibold tracking-tight">
+            {title}
+          </h1>
+          {description ? (
+            <p className="text-muted-foreground">{description}</p>
+          ) : null}
         </div>
 
         {children}
 
         {prev || next ? (
-          <nav aria-label="Pagination" className="grid gap-3 border-t pt-6 sm:grid-cols-2">
-            {prev ? <PagerLink href={prev.href} label="Previous" title={`← ${prev.title}`} /> : <span />}
-            {next ? <PagerLink href={next.href} label="Next" title={`${next.title} →`} align="end" /> : null}
+          <nav
+            aria-label="Pagination"
+            className="grid gap-3 border-t pt-6 sm:grid-cols-2"
+          >
+            {prev ? (
+              <PagerLink
+                href={prev.href}
+                label="Previous"
+                title={`← ${prev.title}`}
+              />
+            ) : (
+              <span />
+            )}
+            {next ? (
+              <PagerLink
+                href={next.href}
+                label="Next"
+                title={`${next.title} →`}
+                align="end"
+              />
+            ) : null}
           </nav>
         ) : null}
       </main>
@@ -71,9 +122,15 @@ export function DocsPage({
           aria-label="On this page"
           className="hidden w-[220px] shrink-0 flex-col gap-2 py-10 pr-8 xl:flex"
         >
-          <span className="text-xs font-medium text-muted-foreground">On this page</span>
+          <span className="text-xs font-medium text-muted-foreground">
+            On this page
+          </span>
           {toc.map((item) => (
-            <a key={item.id} href={`#${item.id}`} className="text-muted-foreground hover:text-foreground">
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="text-muted-foreground hover:text-foreground"
+            >
               {item.label}
             </a>
           ))}
@@ -122,8 +179,12 @@ export function DocSection({
 }) {
   return (
     <section id={id} className="flex scroll-mt-8 flex-col gap-4">
-      <h2 className="font-heading border-b pb-2 text-[22px] font-semibold tracking-tight">{title}</h2>
-      {description ? <p className="text-muted-foreground">{description}</p> : null}
+      <h2 className="border-b pb-2 font-heading text-[22px] font-semibold tracking-tight">
+        {title}
+      </h2>
+      {description ? (
+        <p className="text-muted-foreground">{description}</p>
+      ) : null}
       {children}
     </section>
   )
@@ -181,7 +242,9 @@ export function DocPreviewTabs({
             <TabsTrigger id="preview">Preview</TabsTrigger>
             <TabsTrigger id="code">Code</TabsTrigger>
           </TabsList>
-          <span className="font-mono text-xs text-muted-foreground">{file}</span>
+          <span className="font-mono text-xs text-muted-foreground">
+            {file}
+          </span>
         </div>
         <TabsContent id="preview" className="m-0">
           <div className="flex min-h-[220px] flex-wrap items-center justify-center gap-3 bg-background bg-[radial-gradient(var(--border)_1px,transparent_1px)] bg-[length:16px_16px] p-8">

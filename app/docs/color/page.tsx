@@ -1,5 +1,13 @@
+import type { Metadata } from "next"
+
 import { DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Color",
+  description:
+    "Semantic tokens. Use these names in code, never raw hex values. Light and dark values come from the same token set.",
+}
 
 const groups = [
   {
@@ -82,10 +90,15 @@ export default function ColorDocsPage() {
         <div className="flex flex-col gap-8">
           {groups.map((group) => (
             <div key={group.title} className="flex flex-col gap-3">
-              <h3 className="font-heading text-sm font-medium">{group.title}</h3>
+              <h3 className="font-heading text-sm font-medium">
+                {group.title}
+              </h3>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {group.tokens.map((token) => (
-                  <div key={token.name} className="flex flex-col overflow-hidden rounded-lg border">
+                  <div
+                    key={token.name}
+                    className="flex flex-col overflow-hidden rounded-lg border"
+                  >
                     <div className={`h-16 ${token.className}`} />
                     <div className="px-3 py-2">
                       <p className="font-mono text-xs">--{token.name}</p>
@@ -98,12 +111,18 @@ export default function ColorDocsPage() {
         </div>
       </DocSection>
 
-      <DocSection id="grayscale" title="Grayscale" description="Every screen works in gray first. Color is added only to show status.">
+      <DocSection
+        id="grayscale"
+        title="Grayscale"
+        description="Every screen works in gray first. Color is added only to show status."
+      >
         <div className="grid grid-cols-11 overflow-hidden rounded-lg border">
           {grays.map((gray) => (
             <div key={gray.step} className="flex flex-col">
               <div className={`h-14 ${gray.className}`} />
-              <span className="px-1 py-1 text-center font-mono text-[10px] text-muted-foreground">{gray.step}</span>
+              <span className="px-1 py-1 text-center font-mono text-[10px] text-muted-foreground">
+                {gray.step}
+              </span>
             </div>
           ))}
         </div>
@@ -136,9 +155,18 @@ export default function ColorDocsPage() {
 
       <DocSection id="usage" title="Usage">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Use Tailwind token classes such as <code>bg-primary</code> and <code>text-muted-foreground</code>.</li>
-          <li>Use success, warning, destructive, and info only for status, never for decoration.</li>
-          <li>Check text contrast of the pairs in the table. White on primary passes 4.5:1.</li>
+          <li>
+            Use Tailwind token classes such as <code>bg-primary</code> and{" "}
+            <code>text-muted-foreground</code>.
+          </li>
+          <li>
+            Use success, warning, destructive, and info only for status, never
+            for decoration.
+          </li>
+          <li>
+            Check text contrast of the pairs in the table. White on primary
+            passes 4.5:1.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

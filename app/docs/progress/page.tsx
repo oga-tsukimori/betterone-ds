@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { ProgressDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Progress",
+  description: "Shows how far a task has come.",
+}
 
 const code = `<Progress value={60} aria-label="Upload">
   <ProgressTrack>
@@ -22,7 +35,12 @@ export default function ProgressDocsPage() {
       ]}
       {...pagerFor("/docs/progress")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/progress.tsx" code={code} preview={<ProgressDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/progress.tsx"
+        code={code}
+        preview={<ProgressDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add progress" />
@@ -41,7 +59,10 @@ export default function ProgressDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Always set an aria-label. Use indeterminate when the length is unknown.</li>
+          <li>
+            Always set an aria-label. Use indeterminate when the length is
+            unknown.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { LabelDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Label",
+  description: "Names a form control. Click the label to focus its field.",
+}
 
 const code = `<Label htmlFor="email">Email</Label>
 <Input id="email" type="email" />`
@@ -19,7 +32,12 @@ export default function LabelDocsPage() {
       ]}
       {...pagerFor("/docs/label")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/label.tsx" code={code} preview={<LabelDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/label.tsx"
+        code={code}
+        preview={<LabelDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add label" />
@@ -29,9 +47,7 @@ export default function LabelDocsPage() {
         <DocTable
           label="Label props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["htmlFor", "string", "\u2014"],
-          ]}
+          rows={[["htmlFor", "string", "\u2014"]]}
         />
       </DocSection>
 

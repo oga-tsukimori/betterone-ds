@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { CommandDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Command",
+  description: "A searchable list of actions, like a command palette.",
+}
 
 const code = `<Command>
   <CommandInput placeholder="Type a command…" />
@@ -23,7 +36,12 @@ export default function CommandDocsPage() {
       ]}
       {...pagerFor("/docs/command")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/command.tsx" code={code} preview={<CommandDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/command.tsx"
+        code={code}
+        preview={<CommandDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add command" />
@@ -33,9 +51,7 @@ export default function CommandDocsPage() {
         <DocTable
           label="Command props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["CommandDialog open", "boolean", "false"],
-          ]}
+          rows={[["CommandDialog open", "boolean", "false"]]}
         />
       </DocSection>
 

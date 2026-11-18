@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { RadioGroupDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Radio Group",
+  description: "Choose one option from a short list.",
+}
 
 const code = `<RadioGroup defaultValue="card">
   <RadioGroupItem value="card">Card</RadioGroupItem>
@@ -21,7 +34,12 @@ export default function RadioGroupDocsPage() {
       ]}
       {...pagerFor("/docs/radio-group")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/radio-group.tsx" code={code} preview={<RadioGroupDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/radio-group.tsx"
+        code={code}
+        preview={<RadioGroupDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add radio-group" />
@@ -33,7 +51,7 @@ export default function RadioGroupDocsPage() {
           headers={["Prop", "Type", "Default"]}
           rows={[
             ["defaultValue", "string", "\u2014"],
-            ["orientation", "\"horizontal\" | \"vertical\"", "\"vertical\""],
+            ["orientation", '"horizontal" | "vertical"', '"vertical"'],
             ["isDisabled", "boolean", "false"],
           ]}
         />
@@ -41,7 +59,9 @@ export default function RadioGroupDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Arrow keys move between options. Give the group an aria-label.</li>
+          <li>
+            Arrow keys move between options. Give the group an aria-label.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

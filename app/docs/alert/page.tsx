@@ -1,6 +1,20 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Alert",
+  description:
+    "Displays a short message that needs the user's attention, such as a status or an error.",
+}
 
 const code = `import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
@@ -36,7 +50,9 @@ export default function AlertDocsPage() {
           <div className="flex w-full flex-col gap-4">
             <Alert>
               <AlertTitle>Heads up</AlertTitle>
-              <AlertDescription>Color is only used when it carries meaning.</AlertDescription>
+              <AlertDescription>
+                Color is only used when it carries meaning.
+              </AlertDescription>
             </Alert>
             <Alert variant="destructive">
               <AlertTitle>Something went wrong</AlertTitle>
@@ -60,8 +76,14 @@ export default function AlertDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Use a title and a description so screen readers announce the full message.</li>
-          <li>Do not rely on color alone. Pair the destructive variant with clear wording.</li>
+          <li>
+            Use a title and a description so screen readers announce the full
+            message.
+          </li>
+          <li>
+            Do not rely on color alone. Pair the destructive variant with clear
+            wording.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

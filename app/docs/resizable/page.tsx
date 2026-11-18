@@ -1,6 +1,23 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable"
+
+export const metadata: Metadata = {
+  title: "Resizable",
+  description: "Panels that can be resized by dragging or with the keyboard.",
+}
 
 const code = `<ResizablePanelGroup orientation="horizontal">
   <ResizablePanel defaultSize={33}>Sidebar</ResizablePanel>
@@ -27,13 +44,20 @@ export default function ResizableDocsPage() {
         file="components/ui/resizable.tsx"
         code={code}
         preview={
-          <ResizablePanelGroup orientation="horizontal" className="h-40 max-w-md rounded-lg border">
+          <ResizablePanelGroup
+            orientation="horizontal"
+            className="h-40 max-w-md rounded-lg border"
+          >
             <ResizablePanel defaultSize={33}>
-              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">Sidebar</div>
+              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+                Sidebar
+              </div>
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={67}>
-              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">Content</div>
+              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+                Content
+              </div>
             </ResizablePanel>
           </ResizablePanelGroup>
         }
@@ -48,7 +72,12 @@ export default function ResizableDocsPage() {
           label="Resizable props"
           headers={["Component", "Prop", "Type", "Default"]}
           rows={[
-            ["ResizablePanelGroup", "orientation", "\"horizontal\" | \"vertical\"", "\"horizontal\""],
+            [
+              "ResizablePanelGroup",
+              "orientation",
+              '"horizontal" | "vertical"',
+              '"horizontal"',
+            ],
             ["ResizablePanel", "defaultSize", "number", "\u2014"],
             ["ResizableHandle", "withHandle", "boolean", "false"],
           ]}
@@ -57,7 +86,10 @@ export default function ResizableDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>The handle is focusable. Arrow keys resize, Home/End jump to the limits.</li>
+          <li>
+            The handle is focusable. Arrow keys resize, Home/End jump to the
+            limits.
+          </li>
           <li>Set a minimum size so content never becomes unreadable.</li>
         </ul>
       </DocSection>

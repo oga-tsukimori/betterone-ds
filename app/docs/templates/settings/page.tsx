@@ -1,9 +1,22 @@
-import { DocCode, DocPreviewTabs, DocSection, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Settings",
+  description:
+    "A settings page with tabs, on/off switches, and one save action. Copy the layout, then add your own sections.",
+}
 
 const code = `import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
@@ -51,7 +64,10 @@ export default function SettingsTemplatePage() {
               <TabsTrigger id="notifications">Notifications</TabsTrigger>
               <TabsTrigger id="privacy">Privacy</TabsTrigger>
             </TabsList>
-            <TabsContent id="notifications" className="flex flex-col gap-4 pt-4">
+            <TabsContent
+              id="notifications"
+              className="flex flex-col gap-4 pt-4"
+            >
               <div className="flex items-center justify-between gap-3">
                 <Label htmlFor="settings-email">Email notifications</Label>
                 <Switch id="settings-email" defaultSelected />
@@ -77,8 +93,13 @@ export default function SettingsTemplatePage() {
 
       <DocSection id="usage" title="Usage">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Group related settings into tabs. Keep one save action per panel.</li>
-          <li>Switches apply on change. Use the save button only for changes that need a confirmation.</li>
+          <li>
+            Group related settings into tabs. Keep one save action per panel.
+          </li>
+          <li>
+            Switches apply on change. Use the save button only for changes that
+            need a confirmation.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

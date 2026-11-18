@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { AspectRatioDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Aspect Ratio",
+  description: "Keeps content at a fixed width to height ratio.",
+}
 
 const code = `<AspectRatio ratio={16 / 9}>…</AspectRatio>`
 
@@ -18,7 +31,12 @@ export default function AspectRatioDocsPage() {
       ]}
       {...pagerFor("/docs/aspect-ratio")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/aspect-ratio.tsx" code={code} preview={<AspectRatioDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/aspect-ratio.tsx"
+        code={code}
+        preview={<AspectRatioDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add aspect-ratio" />
@@ -28,15 +46,15 @@ export default function AspectRatioDocsPage() {
         <DocTable
           label="Aspect Ratio props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["ratio", "number", "required"],
-          ]}
+          rows={[["ratio", "number", "required"]]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Use for images and video so the layout does not jump while loading.</li>
+          <li>
+            Use for images and video so the layout does not jump while loading.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { DatePickerDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Date Picker",
+  description: "A button that opens a calendar in a popover.",
+}
 
 const code = `<PopoverTrigger>
   <Button variant="outline">Pick a date</Button>
@@ -23,7 +36,12 @@ export default function DatePickerDocsPage() {
       ]}
       {...pagerFor("/docs/date-picker")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/calendar.tsx" code={code} preview={<DatePickerDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/calendar.tsx"
+        code={code}
+        preview={<DatePickerDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add calendar popover" />
@@ -35,7 +53,7 @@ export default function DatePickerDocsPage() {
           headers={["Prop", "Type", "Default"]}
           rows={[
             ["Calendar value", "DateValue", "\u2014"],
-            ["Popover placement", "string", "\"bottom\""],
+            ["Popover placement", "string", '"bottom"'],
           ]}
         />
       </DocSection>

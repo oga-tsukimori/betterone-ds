@@ -1,6 +1,24 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
+
+export const metadata: Metadata = {
+  title: "Collapsible",
+  description:
+    "An expandable region with a trigger. Use Accordion for a group of them.",
+}
 
 const code = `<Collapsible>
   <CollapsibleTrigger>Order #1042 — 3 items</CollapsibleTrigger>
@@ -34,7 +52,9 @@ export default function CollapsibleDocsPage() {
             </CollapsibleTrigger>
             <CollapsibleContent>
               <div className="flex flex-col gap-2 pt-2 text-sm">
-                <div className="rounded-md border px-3 py-2">Flat white × 2</div>
+                <div className="rounded-md border px-3 py-2">
+                  Flat white × 2
+                </div>
                 <div className="rounded-md border px-3 py-2">Oat latte × 1</div>
                 <div className="rounded-md border px-3 py-2">Cold brew × 1</div>
               </div>

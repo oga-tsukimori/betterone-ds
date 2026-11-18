@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { SkeletonDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Skeleton",
+  description: "A placeholder shown while content loads.",
+}
 
 const code = `<Skeleton className="h-4 w-48" />`
 
@@ -18,7 +31,12 @@ export default function SkeletonDocsPage() {
       ]}
       {...pagerFor("/docs/skeleton")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/skeleton.tsx" code={code} preview={<SkeletonDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/skeleton.tsx"
+        code={code}
+        preview={<SkeletonDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add skeleton" />
@@ -28,9 +46,7 @@ export default function SkeletonDocsPage() {
         <DocTable
           label="Skeleton props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["className", "string", "\u2014"],
-          ]}
+          rows={[["className", "string", "\u2014"]]}
         />
       </DocSection>
 

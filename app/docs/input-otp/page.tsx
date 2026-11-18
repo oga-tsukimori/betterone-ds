@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { InputOtpDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Input OTP",
+  description: "A one-time passcode field split into slots.",
+}
 
 const code = `<InputOTP maxLength={6}>
   <InputOTPGroup>
@@ -23,7 +36,12 @@ export default function InputOtpDocsPage() {
       ]}
       {...pagerFor("/docs/input-otp")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/input-otp.tsx" code={code} preview={<InputOtpDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/input-otp.tsx"
+        code={code}
+        preview={<InputOtpDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add input-otp" />

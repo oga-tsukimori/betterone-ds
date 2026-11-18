@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { TooltipDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Tooltip",
+  description: "A short label that appears on hover or focus.",
+}
 
 const code = `<TooltipTrigger>
   <Button variant="outline">Hover me</Button>
@@ -21,7 +34,12 @@ export default function TooltipDocsPage() {
       ]}
       {...pagerFor("/docs/tooltip")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/tooltip.tsx" code={code} preview={<TooltipDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/tooltip.tsx"
+        code={code}
+        preview={<TooltipDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add tooltip" />
@@ -33,7 +51,7 @@ export default function TooltipDocsPage() {
           headers={["Prop", "Type", "Default"]}
           rows={[
             ["TooltipTrigger delay", "number", "0"],
-            ["Tooltip placement", "string", "\"top\""],
+            ["Tooltip placement", "string", '"top"'],
           ]}
         />
       </DocSection>

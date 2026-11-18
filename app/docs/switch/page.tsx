@@ -1,7 +1,21 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Switch",
+  description:
+    "Turns a single setting on or off. The change takes effect right away.",
+}
 
 const code = `import { Switch } from "@/components/ui/switch"
 
@@ -72,8 +86,13 @@ export default function SwitchDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Use a switch for on or off settings. Use a checkbox when the change needs a submit step.</li>
-          <li>Write the label as the setting name, such as "Email notifications".</li>
+          <li>
+            Use a switch for on or off settings. Use a checkbox when the change
+            needs a submit step.
+          </li>
+          <li>
+            Write the label as the setting name, such as "Email notifications".
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { PopoverDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Popover",
+  description: "A small floating panel opened by a button.",
+}
 
 const code = `<PopoverTrigger>
   <Button variant="outline">Open</Button>
@@ -21,7 +34,12 @@ export default function PopoverDocsPage() {
       ]}
       {...pagerFor("/docs/popover")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/popover.tsx" code={code} preview={<PopoverDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/popover.tsx"
+        code={code}
+        preview={<PopoverDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add popover" />
@@ -32,7 +50,7 @@ export default function PopoverDocsPage() {
           label="Popover props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["Popover placement", "string", "\"bottom\""],
+            ["Popover placement", "string", '"bottom"'],
             ["Popover offset", "number", "4"],
           ]}
         />

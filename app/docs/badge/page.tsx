@@ -1,6 +1,19 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Badge } from "@/components/ui/badge"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Badge",
+  description: "Shows a short status, count, or label.",
+}
 
 const code = `import { Badge } from "@/components/ui/badge"
 
@@ -47,13 +60,21 @@ export default function BadgeDocsPage() {
         <DocTable
           label="Badge props"
           headers={["Prop", "Type", "Default"]}
-          rows={[["variant", '"default" | "secondary" | "outline" | "destructive" | "success" | "warning" | "info"', '"default"']]}
+          rows={[
+            [
+              "variant",
+              '"default" | "secondary" | "outline" | "destructive" | "success" | "warning" | "info"',
+              '"default"',
+            ],
+          ]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Badges are text. Do not use them as the only way to show status.</li>
+          <li>
+            Badges are text. Do not use them as the only way to show status.
+          </li>
           <li>Keep the label short, one or two words.</li>
         </ul>
       </DocSection>

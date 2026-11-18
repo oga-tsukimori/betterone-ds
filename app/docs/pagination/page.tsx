@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { PaginationDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Pagination",
+  description: "Move between pages of results.",
+}
 
 const code = `<Pagination>
   <PaginationContent>
@@ -24,7 +37,12 @@ export default function PaginationDocsPage() {
       ]}
       {...pagerFor("/docs/pagination")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/pagination.tsx" code={code} preview={<PaginationDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/pagination.tsx"
+        code={code}
+        preview={<PaginationDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add pagination" />
@@ -34,9 +52,7 @@ export default function PaginationDocsPage() {
         <DocTable
           label="Pagination props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["PaginationLink isActive", "boolean", "false"],
-          ]}
+          rows={[["PaginationLink isActive", "boolean", "false"]]}
         />
       </DocSection>
 

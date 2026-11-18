@@ -1,5 +1,13 @@
+import type { Metadata } from "next"
+
 import { DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Spacing",
+  description:
+    "A 4px base for gaps and padding. Radius is set from one base value, so every corner in the product matches.",
+}
 
 const spacing = [
   ["0", 0],
@@ -59,10 +67,15 @@ export default function SpacingDocsPage() {
             <tbody>
               {spacing.map(([token, px]) => (
                 <tr key={token} className="border-b last:border-b-0">
-                  <td className="px-4 py-2 font-mono text-xs">spacing-{token}</td>
+                  <td className="px-4 py-2 font-mono text-xs">
+                    spacing-{token}
+                  </td>
                   <td className="px-4 py-2 font-mono text-xs">{px}</td>
                   <td className="px-4 py-2">
-                    <div className="h-3 rounded-sm bg-primary" style={{ width: `${px}px` }} />
+                    <div
+                      className="h-3 rounded-sm bg-primary"
+                      style={{ width: `${px}px` }}
+                    />
                   </td>
                 </tr>
               ))}
@@ -71,7 +84,11 @@ export default function SpacingDocsPage() {
         </div>
       </DocSection>
 
-      <DocSection id="radius" title="Radius" description="The base radius is 8px. Each step follows the token scale.">
+      <DocSection
+        id="radius"
+        title="Radius"
+        description="The base radius is 8px. Each step follows the token scale."
+      >
         <div className="grid grid-cols-2 gap-4 rounded-xl border bg-background p-6 sm:grid-cols-4">
           {radii.map((r) => (
             <div key={r.name} className="flex flex-col items-start gap-2">
@@ -98,7 +115,10 @@ export default function SpacingDocsPage() {
       <DocSection id="usage" title="Usage">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Use the 4px steps for gaps: 8, 12, 16, 24, 32, 48.</li>
-          <li>Do not hardcode pixel values in components. Use Tailwind spacing classes.</li>
+          <li>
+            Do not hardcode pixel values in components. Use Tailwind spacing
+            classes.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>
