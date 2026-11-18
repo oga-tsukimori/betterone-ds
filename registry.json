@@ -158,7 +158,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ]
     },
@@ -275,7 +275,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ]
     },
@@ -345,7 +345,7 @@
       "dependencies": [
         "class-variance-authority",
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -382,7 +382,7 @@
       "dependencies": [
         "cn",
         "embla-carousel-react",
-        "lucide-react"
+        "@phosphor-icons/react"
       ],
       "registryDependencies": [
         "button"
@@ -417,7 +417,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ]
     },
@@ -435,7 +435,7 @@
       "dependencies": [
         "class-variance-authority",
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ],
       "registryDependencies": [
         "button"
@@ -469,7 +469,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -490,7 +490,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -512,7 +512,7 @@
       "dependencies": [
         "class-variance-authority",
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ]
     },
@@ -529,7 +529,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -581,7 +581,7 @@
       "dependencies": [
         "class-variance-authority",
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ]
     },
@@ -673,7 +673,7 @@
       "dependencies": [
         "cn",
         "input-otp",
-        "lucide-react"
+        "@phosphor-icons/react"
       ]
     },
     {
@@ -793,7 +793,7 @@
       "dependencies": [
         "@shadcn/react",
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ],
       "registryDependencies": [
         "button"
@@ -827,7 +827,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ]
     },
     {
@@ -858,7 +858,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ],
       "registryDependencies": [
         "button"
@@ -910,7 +910,7 @@
       "dependencies": [
         "@shadcn/react",
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ],
       "registryDependencies": [
         "button"
@@ -976,7 +976,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -1012,7 +1012,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -1033,7 +1033,7 @@
       "dependencies": [
         "class-variance-authority",
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [
@@ -1089,7 +1089,7 @@
         }
       ],
       "dependencies": [
-        "lucide-react",
+        "@phosphor-icons/react",
         "sonner"
       ],
       "registryDependencies": [
@@ -1109,7 +1109,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react"
+        "@phosphor-icons/react"
       ]
     },
     {
@@ -1243,7 +1243,7 @@
       ],
       "dependencies": [
         "cn",
-        "lucide-react",
+        "@phosphor-icons/react",
         "react-aria-components"
       ],
       "registryDependencies": [

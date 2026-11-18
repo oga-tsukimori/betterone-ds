@@ -82,7 +82,7 @@
     --accent: #394447;
     --accent-foreground: #f1f3f3;
     --destructive: #ff6467;
-    --destructive-foreground: #460809;
+    --destructive-foreground: #090b0c;
     --destructive-muted: #460809;
     --success: #00c950;
     --success-foreground: #032e15;
@@ -417,3 +417,8 @@
 .bo-shine:hover::after { transform: translateX(130%); transition: transform .8s ease; }
 @media (prefers-reduced-motion: reduce) { .bo-breathe { animation: none !important; } }
 
+
+/* Playground preview: density changes how roomy cards are. */
+[data-playground-preview] [data-slot="card"] {
+  --card-spacing: var(--pg-card-spacing, 1.5rem);
+}

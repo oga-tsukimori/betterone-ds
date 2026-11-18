@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretLeft, CaretRight } from "@phosphor-icons/react"
 import * as React from "react"
 import { cva } from "class-variance-authority"
 import { cn } from "cn"
@@ -29,7 +30,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
 const cellVariants = cva(
   "group/day relative mt-2 aspect-square h-full w-full cursor-default rounded-(--cell-radius) p-0 text-center select-none [&:is(:last-child>[data-selected=true])>div]:rounded-r-(--cell-radius)",
@@ -150,14 +150,14 @@ function CalendarInner({
           slot="previous"
           className="size-(--cell-size) p-0 select-none aria-disabled:opacity-50"
         >
-          <ChevronLeftIcon className="size-4" />
+          <CaretLeft className="size-4" />
         </Button>
         <Button
           variant={buttonVariant}
           slot="next"
           className="size-(--cell-size) p-0 select-none aria-disabled:opacity-50"
         >
-          <ChevronRightIcon className="size-4" />
+          <CaretRight className="size-4" />
         </Button>
       </header>
       {Array.from({ length: numberOfMonths }, (_, i) => (

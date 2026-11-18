@@ -1,8 +1,8 @@
+import { CaretLeft, CaretRight, DotsThree } from "@phosphor-icons/react/ssr"
 import * as React from "react"
 import { cn } from "cn"
 
 import { LinkButton } from "@/components/ui/button"
-import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -68,7 +68,7 @@ function PaginationPrevious({
       className={cn("pl-2!", className)}
       {...props}
     >
-      <ChevronLeftIcon data-icon="inline-start" />
+      <CaretLeft data-icon="inline-start" />
       <span className="hidden sm:block">{text}</span>
     </PaginationLink>
   )
@@ -87,7 +87,7 @@ function PaginationNext({
       {...props}
     >
       <span className="hidden sm:block">{text}</span>
-      <ChevronRightIcon data-icon="inline-end" />
+      <CaretRight data-icon="inline-end" />
     </PaginationLink>
   )
 }
@@ -106,7 +106,7 @@ function PaginationEllipsis({
       )}
       {...props}
     >
-      <MoreHorizontalIcon
+      <DotsThree
       />
       <span className="sr-only">More pages</span>
     </span>

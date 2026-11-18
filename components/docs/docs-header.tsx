@@ -1,12 +1,11 @@
 "use client"
 
+import { MagnifyingGlass, Moon, Sun } from "@phosphor-icons/react"
 import * as React from "react"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Moon, Search, Sun } from "lucide-react"
 import { useTheme } from "@/components/theme-provider"
 
-import { Brand, LINKS } from "@/components/landing/nav"
+import { Brand, NavLinks } from "@/components/landing/nav"
 import { docsPages } from "@/lib/docs-nav"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
@@ -45,17 +44,7 @@ export function DocsHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-5">
         <Brand />
-        <nav className="ml-4 hidden items-center gap-1 md:flex" aria-label="Main">
-          {LINKS.map((l) => (
-            <Link
-              key={l.label}
-              href={l.href}
-              className="relative rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors after:absolute after:inset-x-3 after:bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-[var(--brand-mint)] after:transition-transform hover:text-foreground hover:after:scale-x-100"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
 
       <div className="ml-auto flex items-center gap-2">
         <Button
@@ -66,7 +55,7 @@ export function DocsHeader() {
           onPress={() => setOpen(true)}
         >
           <span className="flex items-center gap-2">
-            <Search className="size-3.5" aria-hidden="true" />
+            <MagnifyingGlass className="size-3.5" aria-hidden="true" />
             Search docs…
           </span>
           <kbd className="font-mono text-xs">⌘K</kbd>
@@ -81,7 +70,9 @@ export function DocsHeader() {
           <Moon className="dark:hidden" aria-hidden="true" />
         </Button>
         <a
-          href="https://github.com"
+          href="https://github.com/oga-tsukimori/betterone-ds"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="BetterOne on GitHub"
           className={buttonVariants({ variant: "outline", size: "icon-sm" })}
         >

@@ -24,7 +24,7 @@ function RadioGroupItem({ className, children, ...props }: RadioProps) {
     <RadioPrimitive
       data-slot="radio-group-item"
       className={cn(
-        "group/radio-group-item peer relative flex aspect-square size-4 shrink-0 rounded-full border border-transparent bg-input/90 outline-none group-has-[:focus-visible]/field-label:border-transparent group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-2 focus-visible:ring-ring aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-focus-visible:ring-2 data-focus-visible:ring-ring data-invalid:border-destructive data-invalid:ring-3 data-invalid:ring-destructive/20 data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 dark:data-invalid:border-destructive/50 dark:data-invalid:ring-destructive/40 data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary data-selected:bg-primary data-selected:text-primary-foreground dark:data-selected:bg-primary",
+        "group/radio-group-item relative flex items-center gap-2 text-sm outline-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
         className
       )}
       {...props}
@@ -33,10 +33,10 @@ function RadioGroupItem({ className, children, ...props }: RadioProps) {
         <>
           <span
             data-slot="radio-group-indicator"
-            className="flex size-4 items-center justify-center"
+            className="relative flex aspect-square size-4 shrink-0 items-center justify-center rounded-full border border-transparent bg-input/90 group-data-[selected]/radio-group-item:bg-primary group-data-[focus-visible]/radio-group-item:ring-2 group-data-[focus-visible]/radio-group-item:ring-ring group-data-[invalid]/radio-group-item:border-destructive group-data-[invalid]/radio-group-item:ring-3 group-data-[invalid]/radio-group-item:ring-destructive/20"
           >
             {isSelected && (
-              <span className="absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-foreground dark:size-2.5" />
+              <span className="size-2 rounded-full bg-primary-foreground dark:size-2.5" />
             )}
           </span>
           {children}

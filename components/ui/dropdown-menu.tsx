@@ -1,5 +1,6 @@
 "use client"
 
+import { CaretRight, Check } from "@phosphor-icons/react"
 import * as React from "react"
 import { cva } from "class-variance-authority"
 import { cn } from "cn"
@@ -16,7 +17,6 @@ import {
   type MenuItemProps as MenuItemPrimitiveProps,
   type MenuSectionProps as MenuSectionPrimitiveProps,
 } from "react-aria-components"
-import { CheckIcon, ChevronRightIcon } from "lucide-react"
 
 function DropdownMenuTrigger({
   ...props
@@ -140,7 +140,7 @@ function DropdownMenuItem({
                 }
               >
                 {isSelected ? (
-                  <CheckIcon
+                  <Check
                   />
                 ) : null}
               </span>
@@ -181,7 +181,7 @@ function DropdownMenuSubTrigger({
       {composeRenderProps(children, (children) => (
         <>
           {children}
-          <ChevronRightIcon className="ml-auto" />
+          <CaretRight className="ml-auto" />
         </>
       ))}
     </MenuItemPrimitive>

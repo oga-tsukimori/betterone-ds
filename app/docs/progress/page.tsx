@@ -15,11 +15,7 @@ export const metadata: Metadata = {
   description: "Shows how far a task has come.",
 }
 
-const code = `<Progress value={60} aria-label="Upload">
-  <ProgressTrack>
-    <ProgressIndicator />
-  </ProgressTrack>
-</Progress>`
+const code = `<Progress value={60} aria-label="Upload" />`
 
 export default function ProgressDocsPage() {
   return (

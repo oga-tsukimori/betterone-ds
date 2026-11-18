@@ -1,5 +1,6 @@
 "use client"
 
+import { ArrowDown } from "@phosphor-icons/react"
 import * as React from "react"
 import {
   MessageScroller as MessageScrollerPrimitive,
@@ -10,7 +11,6 @@ import {
 import { cn } from "cn"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDownIcon } from "lucide-react"
 
 function MessageScrollerProvider(
   props: React.ComponentProps<typeof MessageScrollerPrimitive.Provider>
@@ -107,7 +107,7 @@ function MessageScrollerButton({
     >
       {children ?? (
         <>
-          <ArrowDownIcon
+          <ArrowDown
           />
           <span className="sr-only">
             {direction === "end" ? "Scroll to end" : "Scroll to start"}

@@ -1,5 +1,6 @@
 "use client"
 
+import { X } from "@phosphor-icons/react"
 import * as React from "react"
 import { cn } from "cn"
 import {
@@ -14,7 +15,6 @@ import {
 } from "react-aria-components"
 
 import { Button } from "@/components/ui/button"
-import { XIcon } from "lucide-react"
 
 function DialogTrigger({ ...props }: DialogTriggerPrimitiveProps) {
   return <DialogTriggerPrimitive data-slot="dialog-trigger" {...props} />
@@ -92,7 +92,7 @@ function Dialog({
               className="absolute top-4 right-4 bg-secondary"
               size="icon-sm"
             >
-              <XIcon
+              <X
               />
               <span className="sr-only">Close</span>
             </DialogClose>
