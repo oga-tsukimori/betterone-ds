@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { CalendarDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Calendar",
+  description: "A month grid for picking a date.",
+}
 
 const code = `<Calendar aria-label="Pick a date" />`
 
@@ -18,7 +31,12 @@ export default function CalendarDocsPage() {
       ]}
       {...pagerFor("/docs/calendar")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/calendar.tsx" code={code} preview={<CalendarDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/calendar.tsx"
+        code={code}
+        preview={<CalendarDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add calendar" />

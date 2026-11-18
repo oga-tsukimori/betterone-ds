@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { NavigationMenuDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Navigation Menu",
+  description: "A list of links for the main site navigation.",
+}
 
 const code = `<NavigationMenu aria-label="Main">
   <NavigationMenuList>
@@ -24,7 +37,12 @@ export default function NavigationMenuDocsPage() {
       ]}
       {...pagerFor("/docs/navigation-menu")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/navigation-menu.tsx" code={code} preview={<NavigationMenuDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/navigation-menu.tsx"
+        code={code}
+        preview={<NavigationMenuDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add navigation-menu" />
@@ -34,9 +52,7 @@ export default function NavigationMenuDocsPage() {
         <DocTable
           label="Navigation Menu props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["NavigationMenuLink isActive", "boolean", "false"],
-          ]}
+          rows={[["NavigationMenuLink isActive", "boolean", "false"]]}
         />
       </DocSection>
 

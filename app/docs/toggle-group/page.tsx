@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { ToggleGroupDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Toggle Group",
+  description: "A set of toggles where one or many can be on.",
+}
 
 const code = `<ToggleGroup selectionMode="single">
   <ToggleGroupItem id="left">Left</ToggleGroupItem>
@@ -21,7 +34,12 @@ export default function ToggleGroupDocsPage() {
       ]}
       {...pagerFor("/docs/toggle-group")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/toggle-group.tsx" code={code} preview={<ToggleGroupDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/toggle-group.tsx"
+        code={code}
+        preview={<ToggleGroupDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add toggle-group" />
@@ -32,9 +50,9 @@ export default function ToggleGroupDocsPage() {
           label="Toggle Group props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["selectionMode", "\"single\" | \"multiple\"", "\"single\""],
-            ["variant", "\"default\" | \"outline\"", "\"default\""],
-            ["orientation", "\"horizontal\" | \"vertical\"", "\"horizontal\""],
+            ["selectionMode", '"single" | "multiple"', '"single"'],
+            ["variant", '"default" | "outline"', '"default"'],
+            ["orientation", '"horizontal" | "vertical"', '"horizontal"'],
           ]}
         />
       </DocSection>

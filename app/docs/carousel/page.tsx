@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { CarouselDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Carousel",
+  description: "Slides you can swipe or step through.",
+}
 
 const code = `<Carousel>
   <CarouselContent>
@@ -24,7 +37,12 @@ export default function CarouselDocsPage() {
       ]}
       {...pagerFor("/docs/carousel")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/carousel.tsx" code={code} preview={<CarouselDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/carousel.tsx"
+        code={code}
+        preview={<CarouselDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add carousel" />
@@ -35,7 +53,7 @@ export default function CarouselDocsPage() {
           label="Carousel props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["orientation", "\"horizontal\" | \"vertical\"", "\"horizontal\""],
+            ["orientation", '"horizontal" | "vertical"', '"horizontal"'],
             ["opts", "EmblaOptions", "\u2014"],
           ]}
         />
@@ -43,7 +61,10 @@ export default function CarouselDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Previous and Next are buttons. Do not auto-play without a pause control.</li>
+          <li>
+            Previous and Next are buttons. Do not auto-play without a pause
+            control.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

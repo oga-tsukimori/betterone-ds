@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { SliderDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Slider",
+  description: "Pick a value or a range by dragging a thumb.",
+}
 
 const code = `<Slider defaultValue={50} aria-label="Volume" />`
 
@@ -18,7 +31,12 @@ export default function SliderDocsPage() {
       ]}
       {...pagerFor("/docs/slider")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/slider.tsx" code={code} preview={<SliderDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/slider.tsx"
+        code={code}
+        preview={<SliderDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add slider" />

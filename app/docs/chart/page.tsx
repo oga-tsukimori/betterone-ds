@@ -1,6 +1,20 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
 import { ChartDemo } from "@/components/docs/chart-demo"
+
+export const metadata: Metadata = {
+  title: "Chart",
+  description:
+    "Charts built on Recharts. Series colors come from the --chart-1 to --chart-5 tokens.",
+}
 
 const code = `<ChartContainer config={{ orders: { label: "Orders", color: "var(--chart-2)" } }}>
   <BarChart data={data}>
@@ -29,9 +43,7 @@ export default function ChartDocsPage() {
         id="preview"
         file="components/ui/chart.tsx"
         code={code}
-        preview={
-          <ChartDemo />
-        }
+        preview={<ChartDemo />}
       />
 
       <DocSection id="installation" title="Installation">
@@ -44,7 +56,12 @@ export default function ChartDocsPage() {
           headers={["Component", "Prop", "Type", "Default"]}
           rows={[
             ["ChartContainer", "config", "ChartConfig", "required"],
-            ["ChartTooltipContent", "indicator", "\"dot\" | \"line\" | \"dashed\"", "\"dot\""],
+            [
+              "ChartTooltipContent",
+              "indicator",
+              '"dot" | "line" | "dashed"',
+              '"dot"',
+            ],
           ]}
         />
       </DocSection>
@@ -52,7 +69,9 @@ export default function ChartDocsPage() {
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Do not rely on color alone. Add labels or a legend.</li>
-          <li>Provide the underlying numbers in a table for screen reader users.</li>
+          <li>
+            Provide the underlying numbers in a table for screen reader users.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

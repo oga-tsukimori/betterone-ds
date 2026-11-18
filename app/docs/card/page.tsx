@@ -1,7 +1,27 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Card",
+  description: "A container that groups related content and actions.",
+}
 
 const code = `import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -39,10 +59,14 @@ export default function CardDocsPage() {
           <Card className="w-full max-w-sm">
             <CardHeader>
               <CardTitle>Component</CardTitle>
-              <CardDescription>A short summary of what this card shows.</CardDescription>
+              <CardDescription>
+                A short summary of what this card shows.
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">Card body content goes here.</p>
+              <p className="text-sm text-muted-foreground">
+                Card body content goes here.
+              </p>
             </CardContent>
             <CardFooter>
               <Button variant="outline" size="sm">
@@ -74,7 +98,10 @@ export default function CardDocsPage() {
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Use a heading level that fits the page outline.</li>
-          <li>If the whole card is a link, put the link on one element and keep the text clear.</li>
+          <li>
+            If the whole card is a link, put the link on one element and keep
+            the text clear.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

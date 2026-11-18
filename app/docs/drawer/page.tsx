@@ -1,6 +1,20 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
 import { DrawerDemo } from "@/components/docs/drawer-demo"
+
+export const metadata: Metadata = {
+  title: "Drawer",
+  description:
+    "A panel that slides in from the edge of the screen. Swipe to dismiss on touch devices.",
+}
 
 const code = `<Drawer>
   <DrawerTrigger className={buttonVariants({ variant: "outline" })}>Open drawer</DrawerTrigger>
@@ -45,7 +59,12 @@ export default function DrawerDocsPage() {
           label="Drawer props"
           headers={["Component", "Prop", "Type", "Default"]}
           rows={[
-            ["Drawer", "swipeDirection", "\"down\" | \"up\" | \"left\" | \"right\"", "\"down\""],
+            [
+              "Drawer",
+              "swipeDirection",
+              '"down" | "up" | "left" | "right"',
+              '"down"',
+            ],
             ["Drawer", "showSwipeHandle", "boolean", "false"],
             ["Drawer", "modal", "boolean", "true"],
           ]}
@@ -55,7 +74,10 @@ export default function DrawerDocsPage() {
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Focus is trapped inside while open. Esc closes it.</li>
-          <li>Always include a visible Close or Cancel control, not only the swipe gesture.</li>
+          <li>
+            Always include a visible Close or Cancel control, not only the swipe
+            gesture.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

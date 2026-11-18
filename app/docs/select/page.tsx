@@ -1,4 +1,12 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import {
   Select,
   SelectItem,
@@ -8,6 +16,12 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Select",
+  description:
+    "Lets the user choose one option from a list that opens over the page.",
+}
 
 const code = `import {
   Select,
@@ -89,7 +103,10 @@ export default function SelectDocsPage() {
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Give the select a visible label or an aria-label.</li>
-          <li>Use a select for many options. For two or three options, a radio group is easier to scan.</li>
+          <li>
+            Use a select for many options. For two or three options, a radio
+            group is easier to scan.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

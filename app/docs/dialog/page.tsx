@@ -1,6 +1,20 @@
+import type { Metadata } from "next"
+
 import { DialogDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Dialog",
+  description:
+    "A window layered over the page that asks for input or shows detail.",
+}
 
 const code = `<DialogTrigger>
   <Button variant="outline">Close shift</Button>
@@ -25,7 +39,12 @@ export default function DialogDocsPage() {
       ]}
       {...pagerFor("/docs/dialog")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/dialog.tsx" code={code} preview={<DialogDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/dialog.tsx"
+        code={code}
+        preview={<DialogDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add dialog" />
@@ -44,7 +63,9 @@ export default function DialogDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Focus is trapped while open and returns to the trigger on close.</li>
+          <li>
+            Focus is trapped while open and returns to the trigger on close.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

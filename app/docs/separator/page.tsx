@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { SeparatorDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Separator",
+  description: "A thin line that divides content.",
+}
 
 const code = `<Separator />
 <Separator orientation="vertical" />`
@@ -19,7 +32,12 @@ export default function SeparatorDocsPage() {
       ]}
       {...pagerFor("/docs/separator")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/separator.tsx" code={code} preview={<SeparatorDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/separator.tsx"
+        code={code}
+        preview={<SeparatorDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add separator" />
@@ -29,9 +47,7 @@ export default function SeparatorDocsPage() {
         <DocTable
           label="Separator props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["orientation", "\"horizontal\" | \"vertical\"", "\"horizontal\""],
-          ]}
+          rows={[["orientation", '"horizontal" | "vertical"', '"horizontal"']]}
         />
       </DocSection>
 

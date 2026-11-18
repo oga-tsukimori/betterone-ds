@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { SonnerDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Sonner",
+  description: "A toast that confirms an action and goes away on its own.",
+}
 
 const code = `import { toast } from "sonner"
 
@@ -21,7 +34,12 @@ export default function SonnerDocsPage() {
       ]}
       {...pagerFor("/docs/sonner")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/sonner.tsx" code={code} preview={<SonnerDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/sonner.tsx"
+        code={code}
+        preview={<SonnerDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add sonner" />
@@ -33,14 +51,17 @@ export default function SonnerDocsPage() {
           headers={["Prop", "Type", "Default"]}
           rows={[
             ["toast()", "string", "\u2014"],
-            ["Toaster position", "string", "\"bottom-right\""],
+            ["Toaster position", "string", '"bottom-right"'],
           ]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Toasts are announced politely. Do not use them for errors that need action.</li>
+          <li>
+            Toasts are announced politely. Do not use them for errors that need
+            action.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

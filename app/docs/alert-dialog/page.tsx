@@ -1,7 +1,30 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Alert Dialog",
+  description:
+    "A modal that interrupts the user to confirm an action. It has no close icon.",
+}
 
 const code = `<AlertDialogTrigger>
   <Button variant="outline">Delete product</Button>
@@ -41,7 +64,9 @@ export default function AlertDialogDocsPage() {
             <AlertDialog>
               <AlertDialogHeader>
                 <AlertDialogTitle>Delete this product?</AlertDialogTitle>
-                <AlertDialogDescription>This permanently removes the product and its stock history.</AlertDialogDescription>
+                <AlertDialogDescription>
+                  This permanently removes the product and its stock history.
+                </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
@@ -60,16 +85,20 @@ export default function AlertDialogDocsPage() {
         <DocTable
           label="Alert Dialog props"
           headers={["Component", "Prop", "Type", "Default"]}
-          rows={[
-            ["AlertDialog", "size", "\"default\" | \"sm\"", "\"default\""],
-          ]}
+          rows={[["AlertDialog", "size", '"default" | "sm"', '"default"']]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Uses role="alertdialog". Focus moves into the dialog and returns to the trigger on close.</li>
-          <li>Use for destructive or irreversible actions only. Use Dialog for everything else.</li>
+          <li>
+            Uses role="alertdialog". Focus moves into the dialog and returns to
+            the trigger on close.
+          </li>
+          <li>
+            Use for destructive or irreversible actions only. Use Dialog for
+            everything else.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

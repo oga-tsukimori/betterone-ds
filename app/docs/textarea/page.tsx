@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { TextareaDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Textarea",
+  description: "A multi-line text field for longer messages and notes.",
+}
 
 const code = `<Textarea placeholder="Type your message here." />`
 
@@ -18,7 +31,12 @@ export default function TextareaDocsPage() {
       ]}
       {...pagerFor("/docs/textarea")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/textarea.tsx" code={code} preview={<TextareaDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/textarea.tsx"
+        code={code}
+        preview={<TextareaDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add textarea" />

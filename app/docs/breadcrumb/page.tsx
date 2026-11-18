@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { BreadcrumbDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Breadcrumb",
+  description: "Shows where the user is in the site hierarchy.",
+}
 
 const code = `<Breadcrumb>
   <BreadcrumbList>
@@ -23,7 +36,12 @@ export default function BreadcrumbDocsPage() {
       ]}
       {...pagerFor("/docs/breadcrumb")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/breadcrumb.tsx" code={code} preview={<BreadcrumbDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/breadcrumb.tsx"
+        code={code}
+        preview={<BreadcrumbDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add breadcrumb" />
@@ -33,9 +51,7 @@ export default function BreadcrumbDocsPage() {
         <DocTable
           label="Breadcrumb props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["BreadcrumbLink href", "string", "required"],
-          ]}
+          rows={[["BreadcrumbLink href", "string", "required"]]}
         />
       </DocSection>
 

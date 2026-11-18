@@ -1,5 +1,13 @@
+import type { Metadata } from "next"
+
 import { DocCode, DocSection, DocsPage } from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Theming",
+  description:
+    "Colors are CSS variables. Light is the default, and adding the dark class to the html element switches every token at once.",
+}
 
 const css = `:root {
   --background: #ffffff;
@@ -41,7 +49,8 @@ export default function ThemingDocsPage() {
     >
       <DocSection id="tokens" title="Tokens">
         <p className="mb-4 text-muted-foreground">
-          Use the semantic names in code, never raw hex values. They come from the Figma variables, so design and code stay in sync.
+          Use the semantic names in code, never raw hex values. They come from
+          the Figma variables, so design and code stay in sync.
         </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {swatches.map(([name, cls]) => (
@@ -55,7 +64,8 @@ export default function ThemingDocsPage() {
 
       <DocSection id="modes" title="Light and dark">
         <p className="mb-4 text-muted-foreground">
-          The same token has one value per mode. Components never branch on the mode, they only read the variable.
+          The same token has one value per mode. Components never branch on the
+          mode, they only read the variable.
         </p>
         <DocCode code={css} />
       </DocSection>
@@ -63,7 +73,10 @@ export default function ThemingDocsPage() {
       <DocSection id="toggle" title="Switching modes">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
           <li>Use the sun and moon button in the header, or press D.</li>
-          <li>The choice is saved in the browser. With no choice saved, it follows the system setting.</li>
+          <li>
+            The choice is saved in the browser. With no choice saved, it follows
+            the system setting.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

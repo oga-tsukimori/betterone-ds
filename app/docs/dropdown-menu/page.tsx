@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { DropdownMenuDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Dropdown Menu",
+  description: "A menu of actions opened by a button.",
+}
 
 const code = `<DropdownMenuTrigger>
   <Button variant="outline">Open</Button>
@@ -23,7 +36,12 @@ export default function DropdownMenuDocsPage() {
       ]}
       {...pagerFor("/docs/dropdown-menu")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/dropdown-menu.tsx" code={code} preview={<DropdownMenuDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/dropdown-menu.tsx"
+        code={code}
+        preview={<DropdownMenuDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add dropdown-menu" />
@@ -34,7 +52,11 @@ export default function DropdownMenuDocsPage() {
           label="Dropdown Menu props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["DropdownMenuItem variant", "\"default\" | \"destructive\"", "\"default\""],
+            [
+              "DropdownMenuItem variant",
+              '"default" | "destructive"',
+              '"default"',
+            ],
           ]}
         />
       </DocSection>

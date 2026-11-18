@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { FormDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Form",
+  description: "Group fields with labels, hints and errors.",
+}
 
 const code = `<FieldGroup>
   <Field>
@@ -24,7 +37,12 @@ export default function FormDocsPage() {
       ]}
       {...pagerFor("/docs/form")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/field.tsx" code={code} preview={<FormDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/field.tsx"
+        code={code}
+        preview={<FormDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add field" />
@@ -35,7 +53,7 @@ export default function FormDocsPage() {
           label="Form props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["Field orientation", "\"vertical\" | \"horizontal\"", "\"vertical\""],
+            ["Field orientation", '"vertical" | "horizontal"', '"vertical"'],
             ["FieldError", "children", "\u2014"],
           ]}
         />
@@ -43,7 +61,9 @@ export default function FormDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Link hints and errors to the input so screen readers read them.</li>
+          <li>
+            Link hints and errors to the input so screen readers read them.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

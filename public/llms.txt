@@ -1,0 +1,72 @@
+# BetterOne Design System
+
+> BetterOne is a shadcn-aligned design system with Atoms, Molecules and Organisms, Light and Dark modes, and WCAG AA colors. Components and tokens install into any React project with the `betterone-ds` CLI.
+
+This file follows the llms.txt convention (https://llmstxt.org) to help AI assistants and answer engines find and cite the right page directly.
+
+## Getting Started
+
+- [Introduction](https://design.betterone.work/docs): BetterOne is a minimal component library with clear docs for designers and developers. Learn the foundations, copy the code, build faster.
+- [Installation](https://design.betterone.work/docs/installation): Install BetterOne components and tokens into your project with the betterone-ds CLI. The source is copied into your repo, so you can change it.
+- [Theming](https://design.betterone.work/docs/theming): Colors are CSS variables. Light is the default, and adding the dark class to the html element switches every token at once.
+- [Typography](https://design.betterone.work/docs/typography): Inter for UI text, Geist for headings, Tanker for display titles, and Geist Mono for code. Sizes follow the type scale.
+- [Color](https://design.betterone.work/docs/color): Semantic tokens. Use these names in code, never raw hex values. Light and dark values come from the same token set.
+- [Spacing](https://design.betterone.work/docs/spacing): A 4px base for gaps and padding. Radius is set from one base value, so every corner in the product matches.
+
+## Components
+
+- [Accordion](https://design.betterone.work/docs/accordion): A stack of sections that expand and collapse.
+- [Alert Dialog](https://design.betterone.work/docs/alert-dialog): A modal that interrupts the user to confirm an action. It has no close icon.
+- [Alert](https://design.betterone.work/docs/alert): Displays a short message that needs the user's attention, such as a status or an error.
+- [Aspect Ratio](https://design.betterone.work/docs/aspect-ratio): Keeps content at a fixed width to height ratio.
+- [Avatar](https://design.betterone.work/docs/avatar): An image or initials that represent a person.
+- [Badge](https://design.betterone.work/docs/badge): Shows a short status, count, or label.
+- [Breadcrumb](https://design.betterone.work/docs/breadcrumb): Shows where the user is in the site hierarchy.
+- [Button](https://design.betterone.work/docs/buttons): Triggers an action or event, such as submitting a form, opening a dialog, or saving changes.
+- [Calendar](https://design.betterone.work/docs/calendar): A month grid for picking a date.
+- [Card](https://design.betterone.work/docs/card): A container that groups related content and actions.
+- [Carousel](https://design.betterone.work/docs/carousel): Slides you can swipe or step through.
+- [Chart](https://design.betterone.work/docs/chart): Charts built on Recharts. Series colors come from the --chart-1 to --chart-5 tokens.
+- [Checkbox](https://design.betterone.work/docs/checkbox): A control for choosing one or more options from a set.
+- [Collapsible](https://design.betterone.work/docs/collapsible): An expandable region with a trigger. Use Accordion for a group of them.
+- [Command](https://design.betterone.work/docs/command): A searchable list of actions, like a command palette.
+- [Context Menu](https://design.betterone.work/docs/context-menu): A menu opened by right-click or long press on a target.
+- [Date Picker](https://design.betterone.work/docs/date-picker): A button that opens a calendar in a popover.
+- [Dialog](https://design.betterone.work/docs/dialog): A window layered over the page that asks for input or shows detail.
+- [Drawer](https://design.betterone.work/docs/drawer): A panel that slides in from the edge of the screen. Swipe to dismiss on touch devices.
+- [Dropdown Menu](https://design.betterone.work/docs/dropdown-menu): A menu of actions opened by a button.
+- [Form](https://design.betterone.work/docs/form): Group fields with labels, hints and errors.
+- [Hover Card](https://design.betterone.work/docs/hover-card): A preview shown when hovering or focusing a link.
+- [Input OTP](https://design.betterone.work/docs/input-otp): A one-time passcode field split into slots.
+- [Input](https://design.betterone.work/docs/input): A single-line text field for entering short values, such as an email or a name.
+- [Label](https://design.betterone.work/docs/label): Names a form control. Click the label to focus its field.
+- [Menubar](https://design.betterone.work/docs/menubar): A row of menus, like the File and View menus in an app.
+- [Navigation Menu](https://design.betterone.work/docs/navigation-menu): A list of links for the main site navigation.
+- [Pagination](https://design.betterone.work/docs/pagination): Move between pages of results.
+- [Popover](https://design.betterone.work/docs/popover): A small floating panel opened by a button.
+- [Progress](https://design.betterone.work/docs/progress): Shows how far a task has come.
+- [Radio Group](https://design.betterone.work/docs/radio-group): Choose one option from a short list.
+- [Resizable](https://design.betterone.work/docs/resizable): Panels that can be resized by dragging or with the keyboard.
+- [Scroll Area](https://design.betterone.work/docs/scroll-area): A region with styled scrollbars for long content.
+- [Select](https://design.betterone.work/docs/select): Lets the user choose one option from a list that opens over the page.
+- [Separator](https://design.betterone.work/docs/separator): A thin line that divides content.
+- [Sheet](https://design.betterone.work/docs/sheet): A panel that slides in from the edge of the screen.
+- [Sidebar](https://design.betterone.work/docs/sidebar): A side navigation panel with groups and menu items.
+- [Skeleton](https://design.betterone.work/docs/skeleton): A placeholder shown while content loads.
+- [Slider](https://design.betterone.work/docs/slider): Pick a value or a range by dragging a thumb.
+- [Sonner](https://design.betterone.work/docs/sonner): A toast that confirms an action and goes away on its own.
+- [Switch](https://design.betterone.work/docs/switch): Turns a single setting on or off. The change takes effect right away.
+- [Table](https://design.betterone.work/docs/table): A responsive table for rows of data such as stock, orders and prices.
+- [Tabs](https://design.betterone.work/docs/tabs): Splits related content into panels, and shows one panel at a time.
+- [Authentication](https://design.betterone.work/docs/templates/authentication): A sign-in card with one field and one primary action. Copy the layout, then add your own providers.
+- [Dashboard](https://design.betterone.work/docs/templates/dashboard): A starting layout with summary cards and a list of recent activity. Copy the layout, then make it yours.
+- [Settings](https://design.betterone.work/docs/templates/settings): A settings page with tabs, on/off switches, and one save action. Copy the layout, then add your own sections.
+- [Textarea](https://design.betterone.work/docs/textarea): A multi-line text field for longer messages and notes.
+- [Toggle Group](https://design.betterone.work/docs/toggle-group): A set of toggles where one or many can be on.
+- [Toggle](https://design.betterone.work/docs/toggle): A button that switches between on and off.
+- [Tooltip](https://design.betterone.work/docs/tooltip): A short label that appears on hover or focus.
+
+## Install
+
+- CLI package: `npx betterone-ds add <component>`
+- Registry: https://design.betterone.work/docs/installation

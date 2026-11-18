@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { AvatarDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Avatar",
+  description: "An image or initials that represent a person.",
+}
 
 const code = `<Avatar>
   <AvatarFallback>AB</AvatarFallback>
@@ -20,7 +33,12 @@ export default function AvatarDocsPage() {
       ]}
       {...pagerFor("/docs/avatar")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/avatar.tsx" code={code} preview={<AvatarDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/avatar.tsx"
+        code={code}
+        preview={<AvatarDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add avatar" />
@@ -30,15 +48,15 @@ export default function AvatarDocsPage() {
         <DocTable
           label="Avatar props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["size", "\"sm\" | \"default\" | \"lg\"", "\"default\""],
-          ]}
+          rows={[["size", '"sm" | "default" | "lg"', '"default"']]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Give meaningful images alt text. Initials are readable as they are.</li>
+          <li>
+            Give meaningful images alt text. Initials are readable as they are.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

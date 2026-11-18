@@ -1,6 +1,27 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+export const metadata: Metadata = {
+  title: "Table",
+  description:
+    "A responsive table for rows of data such as stock, orders and prices.",
+}
 
 const code = `<Table aria-label="Stock">
   <TableHeader>
@@ -35,15 +56,32 @@ export default function TableDocsPage() {
           <div className="w-full max-w-xl rounded-lg border">
             <Table aria-label="Stock">
               <TableHeader>
-                <TableHead id="p" isRowHeader>Product</TableHead>
+                <TableHead id="p" isRowHeader>
+                  Product
+                </TableHead>
                 <TableHead id="s">SKU</TableHead>
                 <TableHead id="n">Stock</TableHead>
                 <TableHead id="pr">Price</TableHead>
               </TableHeader>
               <TableBody>
-                <TableRow id="1"><TableCell>Oat latte</TableCell><TableCell>BV-1042</TableCell><TableCell>48</TableCell><TableCell>$4.50</TableCell></TableRow>
-                <TableRow id="2"><TableCell>Flat white</TableCell><TableCell>BV-1043</TableCell><TableCell>12</TableCell><TableCell>$4.00</TableCell></TableRow>
-                <TableRow id="3"><TableCell>Cold brew</TableCell><TableCell>BV-1051</TableCell><TableCell>0</TableCell><TableCell>$5.00</TableCell></TableRow>
+                <TableRow id="1">
+                  <TableCell>Oat latte</TableCell>
+                  <TableCell>BV-1042</TableCell>
+                  <TableCell>48</TableCell>
+                  <TableCell>$4.50</TableCell>
+                </TableRow>
+                <TableRow id="2">
+                  <TableCell>Flat white</TableCell>
+                  <TableCell>BV-1043</TableCell>
+                  <TableCell>12</TableCell>
+                  <TableCell>$4.00</TableCell>
+                </TableRow>
+                <TableRow id="3">
+                  <TableCell>Cold brew</TableCell>
+                  <TableCell>BV-1051</TableCell>
+                  <TableCell>0</TableCell>
+                  <TableCell>$5.00</TableCell>
+                </TableRow>
               </TableBody>
             </Table>
           </div>

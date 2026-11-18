@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { SheetDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Sheet",
+  description: "A panel that slides in from the edge of the screen.",
+}
 
 const code = `<SheetTrigger>
   <Button variant="outline">Open</Button>
@@ -21,7 +34,12 @@ export default function SheetDocsPage() {
       ]}
       {...pagerFor("/docs/sheet")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/sheet.tsx" code={code} preview={<SheetDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/sheet.tsx"
+        code={code}
+        preview={<SheetDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add sheet" />
@@ -32,7 +50,7 @@ export default function SheetDocsPage() {
           label="Sheet props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["Sheet side", "\"top\" | \"right\" | \"bottom\" | \"left\"", "\"right\""],
+            ["Sheet side", '"top" | "right" | "bottom" | "left"', '"right"'],
             ["Sheet showCloseButton", "boolean", "true"],
           ]}
         />

@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { ToggleDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Toggle",
+  description: "A button that switches between on and off.",
+}
 
 const code = `<Toggle aria-label="Bold">Bold</Toggle>`
 
@@ -18,7 +31,12 @@ export default function ToggleDocsPage() {
       ]}
       {...pagerFor("/docs/toggle")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/toggle.tsx" code={code} preview={<ToggleDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/toggle.tsx"
+        code={code}
+        preview={<ToggleDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add toggle" />
@@ -29,8 +47,8 @@ export default function ToggleDocsPage() {
           label="Toggle props"
           headers={["Prop", "Type", "Default"]}
           rows={[
-            ["variant", "\"default\" | \"outline\"", "\"default\""],
-            ["size", "\"sm\" | \"default\" | \"lg\"", "\"default\""],
+            ["variant", '"default" | "outline"', '"default"'],
+            ["size", '"sm" | "default" | "lg"', '"default"'],
             ["isSelected", "boolean", "false"],
           ]}
         />

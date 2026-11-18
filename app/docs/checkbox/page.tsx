@@ -1,7 +1,20 @@
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import type { Metadata } from "next"
+
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Checkbox",
+  description: "A control for choosing one or more options from a set.",
+}
 
 const code = `import { Checkbox } from "@/components/ui/checkbox"
 
@@ -71,8 +84,14 @@ export default function CheckboxDocsPage() {
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Every checkbox needs a visible label. The label is the text inside the component.</li>
-          <li>Use a checkbox for multiple choices and a radio group for one choice.</li>
+          <li>
+            Every checkbox needs a visible label. The label is the text inside
+            the component.
+          </li>
+          <li>
+            Use a checkbox for multiple choices and a radio group for one
+            choice.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>

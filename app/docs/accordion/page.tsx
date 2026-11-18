@@ -1,6 +1,19 @@
+import type { Metadata } from "next"
+
 import { AccordionDemo } from "@/components/docs/demos"
-import { DocCode, DocPreviewTabs, DocSection, DocTable, DocsPage } from "@/components/docs/docs-page"
+import {
+  DocCode,
+  DocPreviewTabs,
+  DocSection,
+  DocTable,
+  DocsPage,
+} from "@/components/docs/docs-page"
 import { pagerFor } from "@/lib/docs-nav"
+
+export const metadata: Metadata = {
+  title: "Accordion",
+  description: "A stack of sections that expand and collapse.",
+}
 
 const code = `<Accordion>
   <AccordionItem id="a">
@@ -23,7 +36,12 @@ export default function AccordionDocsPage() {
       ]}
       {...pagerFor("/docs/accordion")}
     >
-      <DocPreviewTabs id="preview" file="components/ui/accordion.tsx" code={code} preview={<AccordionDemo />} />
+      <DocPreviewTabs
+        id="preview"
+        file="components/ui/accordion.tsx"
+        code={code}
+        preview={<AccordionDemo />}
+      />
 
       <DocSection id="installation" title="Installation">
         <DocCode code="npx betterone-ds add accordion" />
@@ -33,15 +51,15 @@ export default function AccordionDocsPage() {
         <DocTable
           label="Accordion props"
           headers={["Prop", "Type", "Default"]}
-          rows={[
-            ["allowsMultipleExpanded", "boolean", "false"],
-          ]}
+          rows={[["allowsMultipleExpanded", "boolean", "false"]]}
         />
       </DocSection>
 
       <DocSection id="accessibility" title="Accessibility">
         <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-          <li>Triggers expose aria-expanded. Enter and Space toggle a section.</li>
+          <li>
+            Triggers expose aria-expanded. Enter and Space toggle a section.
+          </li>
         </ul>
       </DocSection>
     </DocsPage>
