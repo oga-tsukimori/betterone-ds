@@ -48,6 +48,9 @@ const PLACED: Placed[] = [
   { id: "numpad", x: 910, y: 380, w: 270, rot: -1.5, delay: 0.65, node: <NumpadCard /> },
 ]
 
+// length of the arrowhead triangle, tip to back — the line stops exactly at the back
+const ARROW_LEN = 13
+
 /** cubic bezier arrows (one per card, same order): [sx, sy, c1x, c1y, c2x, c2y, ex, ey] */
 const ARROWS: { pts: number[]; delay: number }[] = [
   { pts: [272, 200, 322, 215, 282, 315, 316, 320], delay: 0.9 },
@@ -218,14 +221,14 @@ function Arrows({ offsets }: { offsets: { x: number; y: number }[] }) {
     >
       {ARROWS.map(({ pts, delay }, i) => {
         const o = offsets[i] ?? { x: 0, y: 0 }
-        const [sx, sy, c1x, c1y, c2x, c2y, ex0, ey0] = pts
-        // stop 12px short of the search bar so the head has room to breathe
-        const a0 = Math.atan2(ey0 - c2y, ex0 - c2x)
-        const ex = ex0 - Math.cos(a0) * 12
-        const ey = ey0 - Math.sin(a0) * 12
-        // the start + first control point follow the dragged card; the end stays on the search bar
-        const d = `M${sx + o.x} ${sy + o.y} C${c1x + o.x} ${c1y + o.y}, ${c2x} ${c2y}, ${ex} ${ey}`
+        const [sx, sy, c1x, c1y, c2x, c2y, ex, ey] = pts
         const deg = (Math.atan2(ey - c2y, ex - c2x) * 180) / Math.PI
+        // the line stops exactly at the back of the arrowhead; the solid triangle covers the rest up to its tip
+        const rad = (deg * Math.PI) / 180
+        const backX = ex - Math.cos(rad) * ARROW_LEN
+        const backY = ey - Math.sin(rad) * ARROW_LEN
+        // the start + first control point follow the dragged card; the end stays on the search bar
+        const d = `M${sx + o.x} ${sy + o.y} C${c1x + o.x} ${c1y + o.y}, ${c2x} ${c2y}, ${backX} ${backY}`
         return (
           <g key={i}>
             <path
@@ -258,9 +261,21 @@ function Arrows({ offsets }: { offsets: { x: number; y: number }[] }) {
                 filter: "drop-shadow(0 0 4px color-mix(in oklch, var(--brand-mint) 70%, transparent))",
               }}
             >
-              {/* rounded triangle, tip on the line end, always aligned with the arrow direction */}
-              <path d="M-1 0 L-14 -8 L-14 8 Z" fill="#fff" stroke="#fff" strokeWidth="5" strokeLinejoin="round" />
-              <path d="M-1 0 L-14 -8 L-14 8 Z" fill="var(--brand-mint)" stroke="var(--brand-mint)" strokeWidth="2.2" strokeLinejoin="round" />
+              {/* rounded triangle: tip at the true arrow end, back flush with where the line stops */}
+              <path
+                d={`M0 0 L-${ARROW_LEN} -8 L-${ARROW_LEN} 8 Z`}
+                fill="#fff"
+                stroke="#fff"
+                strokeWidth="5"
+                strokeLinejoin="round"
+              />
+              <path
+                d={`M0 0 L-${ARROW_LEN} -8 L-${ARROW_LEN} 8 Z`}
+                fill="var(--brand-mint)"
+                stroke="var(--brand-mint)"
+                strokeWidth="2.2"
+                strokeLinejoin="round"
+              />
             </g>
             <circle r="3.5" fill="var(--brand-mint)" opacity="0.9">
               <animateMotion
