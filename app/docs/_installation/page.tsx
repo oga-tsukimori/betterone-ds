@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 
 import { DocCode, DocSection, DocsPage } from "@/components/docs/docs-page"
-import { pagerFor } from "@/lib/docs-nav"
 
 export const metadata: Metadata = {
   title: "Installation",
@@ -21,7 +20,6 @@ export default function InstallationDocsPage() {
         { id: "add", label: "Add a component" },
         { id: "next", label: "Next steps" },
       ]}
-      {...pagerFor("/docs/installation")}
     >
       <DocSection id="registry" title="Connect the registry">
         <p className="text-muted-foreground">

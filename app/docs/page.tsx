@@ -22,8 +22,8 @@ export default function IntroductionPage() {
     >
       <DocSection id="start" title="Start here">
         <p className="text-muted-foreground">
-          Begin with Installation to add your first component. Then read the
-          Foundations pages for color, typography, and spacing before you build.
+          Explore the Foundations pages for color, typography, and spacing
+          before you build.
         </p>
       </DocSection>
 

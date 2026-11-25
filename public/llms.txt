@@ -7,7 +7,6 @@ This file follows the llms.txt convention (https://llmstxt.org) to help AI assis
 ## Getting Started
 
 - [Introduction](https://design.betterone.work/docs): BetterOne is a minimal component library with clear docs for designers and developers. Learn the foundations, copy the code, build faster.
-- [Installation](https://design.betterone.work/docs/installation): Install BetterOne components and tokens into your project with the betterone-ds CLI. The source is copied into your repo, so you can change it.
 - [Theming](https://design.betterone.work/docs/theming): Colors are CSS variables. Light is the default, and adding the dark class to the html element switches every token at once.
 - [Typography](https://design.betterone.work/docs/typography): Inter for UI text, Geist for headings, Tanker for display titles, and Geist Mono for code. Sizes follow the type scale.
 - [Color](https://design.betterone.work/docs/color): Semantic tokens. Use these names in code, never raw hex values. Light and dark values come from the same token set.
@@ -69,4 +68,3 @@ This file follows the llms.txt convention (https://llmstxt.org) to help AI assis
 ## Install
 
 - CLI package: `npx betterone-ds add <component>`
-- Registry: https://design.betterone.work/docs/installation

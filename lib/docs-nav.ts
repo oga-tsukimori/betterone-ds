@@ -18,7 +18,6 @@ export const docsNav: DocsNavGroup[] = [
     title: "Getting Started",
     items: [
       { title: "Introduction", href: "/docs" },
-      { title: "Installation", href: "/docs/installation" },
       { title: "Theming", href: "/docs/theming" },
       { title: "Typography", href: "/docs/typography" },
     ],
@@ -107,7 +106,6 @@ export const docsPages: BuiltItem[] = docsNav.flatMap((group) =>
 // Items that have a dedicated page (not the generic placeholder).
 export const builtDocsHrefs = new Set([
   "/docs",
-  "/docs/installation",
   "/docs/typography",
   "/docs/theming",
   "/docs/buttons",

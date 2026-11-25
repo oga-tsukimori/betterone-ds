@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "WCAG AA",
   ],
   authors: [{ name: "BetterOne" }],
-  icons: { icon: "/logo-light.png" },
+  icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
