@@ -112,7 +112,7 @@ function CommandInput({ className, ...props }: InputProps) {
       data-slot="command-input-wrapper"
       className="border-b px-1"
     >
-      <InputGroup className="h-10 border-0 bg-transparent shadow-none ring-0 has-[[data-slot=command-input]:focus-visible]:ring-0">
+      <InputGroup className="h-(--size-control-lg) border-0 bg-transparent shadow-none ring-0 has-[[data-slot=command-input]:focus-visible]:ring-0">
         <Input
           {...props}
           data-slot="command-input"
